@@ -3,6 +3,11 @@ An add-on for the VRM MToon shader. Offers multiple texture and color channels f
 
 [MToon_Multishader.zip](https://github.com/KittFiev/MToon-Multishader/files/11852889/MToon_Multishader.zip)
 
+# DEPENDENCIES
+[Unity 2019.4.35](https://unity.com/releases/editor/archive)
+[UniVRM-0.61.0_68fb Unity Package](https://github.com/vrm-c/UniVRM/releases/tag/v0.61.0)
+[VSeeFace SDK Unity Package](https://github.com/emilianavt/VSeeFaceSDK/releases)
+
 # Version 1.0.0 release
 
 Adds support for:
