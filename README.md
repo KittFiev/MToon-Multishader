@@ -12,7 +12,7 @@ An add-on for the VRM MToon shader. Offers multiple texture and color channels f
 
 Adds support for:
 •10 Main texture channels with Alpha and Color
-     -Main texture channels are default white
+	-Main texture channels are default white
      -Color channels are multiplied by the Main texture channel
      -Texture 1 is always on. Each subsequent channel overwrites the channel prior
 
