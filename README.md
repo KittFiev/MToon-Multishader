@@ -7,7 +7,7 @@ This is a modified version of Suvidriel's MToon Multitexture. Reduced the number
 # DEPENDENCIES
 [Unity 2019.4.35](https://unity.com/releases/editor/archive) <br>
 [UniVRM-0.61.0_68fb Unity Package](https://github.com/vrm-c/UniVRM/releases/tag/v0.61.0) <br>
-[VSeeFace SDK Unity Package (optional. Only needed if you are using this on an exportable vtube model)](https://github.com/emilianavt/VSeeFaceSDK/releases) <br>
+[VSeeFace SDK Unity Package](https://github.com/emilianavt/VSeeFaceSDK/releases) (optional. Only needed if you are using this on an exportable vtube model) <br>
  <br>
 # Version 1.0.0 release
 
