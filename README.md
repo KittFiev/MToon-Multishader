@@ -9,7 +9,7 @@ An add-on for the VRM MToon shader. Offers multiple texture and color channels f
 [VSeeFace SDK Unity Package](https://github.com/emilianavt/VSeeFaceSDK/releases) <br>
  <br>
 # Version 1.0.0 release
- <br>
+
 Adds support for: <br>
 •10 Main texture channels with Alpha and Color <br>
 	-Main texture channels are default white <br>
