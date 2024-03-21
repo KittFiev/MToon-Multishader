@@ -2,8 +2,6 @@
 An add-on for the VRM MToon shader. Offers multiple texture and color channels for advanced material animation on 3d VSF format vtube models <br>
 This is a modified version of Suvidriel's MToon Multitexture. Reduced the number of texture samplers due to GPU limitations and added additional channels for Shade and Emission. Additionally, new Decal textures section for things like tattoos/stickers/markings. <br>
  <br>
-[MToon_Multishader.zip](https://github.com/KittFiev/MToon-Multishader/files/11852889/MToon_Multishader.zip) <br>
- <br>
 # DEPENDENCIES
 [Unity 2019.4.35](https://unity.com/releases/editor/archive) <br>
 [UniVRM-0.61.1_7c03 Unity Package](https://github.com/vrm-c/UniVRM/releases/tag/v0.61.1) <br>
