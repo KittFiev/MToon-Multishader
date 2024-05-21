@@ -32,9 +32,9 @@ Adds support for: <br>
      -Emission 1 is always on. Each subsequent channel overwrites the channel prior <br>
      -All color channels are HDR enabled <br>
 <br>
-#•Stencil ID
+# •Stencil ID
 <br>
-#•Flipbook Textures on Color/Shade, Decal, and Emission Channels
+# •Flipbook Textures on Color/Shade, Decal, and Emission Channels
      -Starts at the second texture channel for each type. Set Channel 2's slider to 1.0
      -Shade Texture Channels are animated as well and synced to Color Texture Channels
      !IMPORTANT NOTE! If you are modifying the scale & offset of the materials UV, make sure that "Generate Mipmaps" on the texture is turned OFF to avoid lines around the UV! This Flipbook method assumes you do not want the tile to texture automatically. Changing the textures "Wrap Mode" has no effect!
