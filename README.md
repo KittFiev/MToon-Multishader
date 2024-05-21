@@ -7,7 +7,7 @@ This is a modified version of Suvidriel's MToon Multitexture. Reduced the number
 [UniVRM-0.61.1_7c03 Unity Package](https://github.com/vrm-c/UniVRM/releases/tag/v0.61.1) <br>
 [VSeeFace SDK Unity Package](https://github.com/emilianavt/VSeeFaceSDK/releases) (Only needed if you are exporting as a vtube model. If it's only for unity, you can ignore) <br>
  <br>
-# Version 1.0.0 release
+# Current Features
 
 Adds support for: <br>
 •10 Main texture channels with Alpha and Color <br>
@@ -31,3 +31,11 @@ Adds support for: <br>
      -Color channels are multiplied by the Emission texture channel <br>
      -Emission 1 is always on. Each subsequent channel overwrites the channel prior <br>
      -All color channels are HDR enabled <br>
+<br>
+#•Stencil ID
+<br>
+#•Flipbook Textures on Color/Shade, Decal, and Emission Channels
+     -Starts at the second texture channel for each type. Set Channel 2's slider to 1.0
+     -Shade Texture Channels are animated as well and synced to Color Texture Channels
+     !IMPORTANT NOTE! If you are modifying the scale & offset of the materials UV, make sure that "Generate Mipmaps" on the texture is turned OFF to avoid lines around the UV! This Flipbook method assumes you do not want the tile to texture automatically. Changing the textures "Wrap Mode" has no effect!
+     
