@@ -37,4 +37,5 @@ Adds support for: <br>
 * Flipbook Textures on Color/Shade, Decal, and Emission Channels<br>
 	- Starts at the second texture channel for each type. Set Channel 2's slider to 1.0<br>
 	- Shade Texture Channels are animated as well and synced to Color Texture Channels<br>
-	- <b>!IMPORTANT NOTE!</b> If you are modifying the scale & offset of the materials UV, make sure that "Generate Mipmaps" on the texture is turned <b>OFF</b> to avoid lines around the UV! This Flipbook method assumes you do not want the texture to tile automatically. Changing the textures "Wrap Mode" has no effect!<br>
+	- <b>!IMPORTANT NOTE!</b> If you are modifying the tile & offset of the materials UV, make sure that <b>Generate Mipmaps"</b> on the texture is turned <b>OFF</b> to avoid lines around the UV!<br>
+ 	- <b>!IMPORTANT NOTE!</b> Make sure the textures wrap mode is set to <b>Repeat</b>! Otherwise the animation will not play correctly!
