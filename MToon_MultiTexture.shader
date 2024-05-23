@@ -3,6 +3,8 @@ Shader "VRM/MToon_MultiTexture"
     Properties
     {
 
+        [IntRange] _StencilID("Stencil ID", Range(0, 255)) = 1
+
         _Cutoff("Alpha Cutoff", Range(0, 1)) = 0.5
         _AmountTex2("Amount Texture 2", Range(0, 1)) = 0.0
         _AmountTex3("Amount Texture 3", Range(0, 1)) = 0.0
@@ -24,7 +26,8 @@ Shader "VRM/MToon_MultiTexture"
         _AmountDecal8("Amount Decal 8", Range(0, 1)) = 0.0
         _AmountDecal9("Amount Decal 9", Range(0, 1)) = 0.0
         _AmountDecal10("Amount Decal 10", Range(0, 1)) = 0.0
-        
+
+        _EmissionAmount1("Emission Amount 1", Range(0, 1)) = 0.0
         _EmissionAmount2("Emission Amount 2", Range(0, 1)) = 0.0
         _EmissionAmount3("Emission Amount 3", Range(0, 1)) = 0.0
         _EmissionAmount4("Emission Amount 4", Range(0, 1)) = 0.0
@@ -57,6 +60,177 @@ Shader "VRM/MToon_MultiTexture"
         _MainColor8("Lit Color + Alpha", Color) = (1,1,1,1)
         _MainColor9("Lit Color + Alpha", Color) = (1,1,1,1)
         _MainColor10("Lit Color + Alpha", Color) = (1,1,1,1)
+
+        //Begin MainTex Flipbook Settings
+        _MainTexColumns1("Columns", Float) = 1.0
+        _MainTexColumns2("Columns", Float) = 1.0
+        _MainTexColumns3("Columns", Float) = 1.0
+        _MainTexColumns4("Columns", Float) = 1.0
+        _MainTexColumns5("Columns", Float) = 1.0
+        _MainTexColumns6("Columns", Float) = 1.0
+        _MainTexColumns7("Columns", Float) = 1.0
+        _MainTexColumns8("Columns", Float) = 1.0
+        _MainTexColumns9("Columns", Float) = 1.0
+        _MainTexColumns10("Columns", Float) = 1.0
+
+        _MainTexRows1("Rows", Float) = 1.0
+        _MainTexRows2("Rows", Float) = 1.0
+        _MainTexRows3("Rows", Float) = 1.0
+        _MainTexRows4("Rows", Float) = 1.0
+        _MainTexRows5("Rows", Float) = 1.0
+        _MainTexRows6("Rows", Float) = 1.0
+        _MainTexRows7("Rows", Float) = 1.0
+        _MainTexRows8("Rows", Float) = 1.0
+        _MainTexRows9("Rows", Float) = 1.0
+        _MainTexRows10("Rows", Float) = 1.0
+
+        _MainTexSpeed1("Speed", Float) = 0.0
+        _MainTexSpeed2("Speed", Float) = 0.0
+        _MainTexSpeed3("Speed", Float) = 0.0
+        _MainTexSpeed4("Speed", Float) = 0.0
+        _MainTexSpeed5("Speed", Float) = 0.0
+        _MainTexSpeed6("Speed", Float) = 0.0
+        _MainTexSpeed7("Speed", Float) = 0.0
+        _MainTexSpeed8("Speed", Float) = 0.0
+        _MainTexSpeed9("Speed", Float) = 0.0
+        _MainTexSpeed10("Speed", Float) = 0.0
+
+        _MainTexFrameIND1("Start Frame", Float) = 0.0
+        _MainTexFrameIND2("Start Frame", Float) = 0.0
+        _MainTexFrameIND3("Start Frame", Float) = 0.0
+        _MainTexFrameIND4("Start Frame", Float) = 0.0
+        _MainTexFrameIND5("Start Frame", Float) = 0.0
+        _MainTexFrameIND6("Start Frame", Float) = 0.0
+        _MainTexFrameIND7("Start Frame", Float) = 0.0
+        _MainTexFrameIND8("Start Frame", Float) = 0.0
+        _MainTexFrameIND9("Start Frame", Float) = 0.0
+        _MainTexFrameIND10("Start Frame", Float) = 0.0
+
+        _MainTexEndFrameIND1("End Frame", Float) = 0.0
+        _MainTexEndFrameIND2("End Frame", Float) = 0.0
+        _MainTexEndFrameIND3("End Frame", Float) = 0.0
+        _MainTexEndFrameIND4("End Frame", Float) = 0.0
+        _MainTexEndFrameIND5("End Frame", Float) = 0.0
+        _MainTexEndFrameIND6("End Frame", Float) = 0.0
+        _MainTexEndFrameIND7("End Frame", Float) = 0.0
+        _MainTexEndFrameIND8("End Frame", Float) = 0.0
+        _MainTexEndFrameIND9("End Frame", Float) = 0.0
+        _MainTexEndFrameIND10("End Frame", Float) = 0.0
+        //End MainTex Flipbook Settings
+
+        //Begin DecalTex Flipbook Settings
+        _DecalTexColumns1("Columns", Float) = 1.0
+        _DecalTexColumns2("Columns", Float) = 1.0
+        _DecalTexColumns3("Columns", Float) = 1.0
+        _DecalTexColumns4("Columns", Float) = 1.0
+        _DecalTexColumns5("Columns", Float) = 1.0
+        _DecalTexColumns6("Columns", Float) = 1.0
+        _DecalTexColumns7("Columns", Float) = 1.0
+        _DecalTexColumns8("Columns", Float) = 1.0
+        _DecalTexColumns9("Columns", Float) = 1.0
+        _DecalTexColumns10("Columns", Float) = 1.0
+
+        _DecalTexRows1("Rows", Float) = 1.0
+        _DecalTexRows2("Rows", Float) = 1.0
+        _DecalTexRows3("Rows", Float) = 1.0
+        _DecalTexRows4("Rows", Float) = 1.0
+        _DecalTexRows5("Rows", Float) = 1.0
+        _DecalTexRows6("Rows", Float) = 1.0
+        _DecalTexRows7("Rows", Float) = 1.0
+        _DecalTexRows8("Rows", Float) = 1.0
+        _DecalTexRows9("Rows", Float) = 1.0
+        _DecalTexRows10("Rows", Float) = 1.0
+
+        _DecalTexSpeed1("Speed", Float) = 0.0
+        _DecalTexSpeed2("Speed", Float) = 0.0
+        _DecalTexSpeed3("Speed", Float) = 0.0
+        _DecalTexSpeed4("Speed", Float) = 0.0
+        _DecalTexSpeed5("Speed", Float) = 0.0
+        _DecalTexSpeed6("Speed", Float) = 0.0
+        _DecalTexSpeed7("Speed", Float) = 0.0
+        _DecalTexSpeed8("Speed", Float) = 0.0
+        _DecalTexSpeed9("Speed", Float) = 0.0
+        _DecalTexSpeed10("Speed", Float) = 0.0
+
+        _DecalTexFrameIND1("Start Frame", Float) = 0.0
+        _DecalTexFrameIND2("Start Frame", Float) = 0.0
+        _DecalTexFrameIND3("Start Frame", Float) = 0.0
+        _DecalTexFrameIND4("Start Frame", Float) = 0.0
+        _DecalTexFrameIND5("Start Frame", Float) = 0.0
+        _DecalTexFrameIND6("Start Frame", Float) = 0.0
+        _DecalTexFrameIND7("Start Frame", Float) = 0.0
+        _DecalTexFrameIND8("Start Frame", Float) = 0.0
+        _DecalTexFrameIND9("Start Frame", Float) = 0.0
+        _DecalTexFrameIND10("Start Frame", Float) = 0.0
+
+        _DecalTexEndFrameIND1("End Frame", Float) = 0.0
+        _DecalTexEndFrameIND2("End Frame", Float) = 0.0
+        _DecalTexEndFrameIND3("End Frame", Float) = 0.0
+        _DecalTexEndFrameIND4("End Frame", Float) = 0.0
+        _DecalTexEndFrameIND5("End Frame", Float) = 0.0
+        _DecalTexEndFrameIND6("End Frame", Float) = 0.0
+        _DecalTexEndFrameIND7("End Frame", Float) = 0.0
+        _DecalTexEndFrameIND8("End Frame", Float) = 0.0
+        _DecalTexEndFrameIND9("End Frame", Float) = 0.0
+        _DecalTexEndFrameIND10("End Frame", Float) = 0.0
+        //End DecalTex Flipbook Settings
+
+        //Begin EmissionTex Flipbook Settings
+        _EmissionTexColumns1("Columns", Float) = 1.0
+        _EmissionTexColumns2("Columns", Float) = 1.0
+        _EmissionTexColumns3("Columns", Float) = 1.0
+        _EmissionTexColumns4("Columns", Float) = 1.0
+        _EmissionTexColumns5("Columns", Float) = 1.0
+        _EmissionTexColumns6("Columns", Float) = 1.0
+        _EmissionTexColumns7("Columns", Float) = 1.0
+        _EmissionTexColumns8("Columns", Float) = 1.0
+        _EmissionTexColumns9("Columns", Float) = 1.0
+        _EmissionTexColumns10("Columns", Float) = 1.0
+
+        _EmissionTexRows1("Rows", Float) = 1.0
+        _EmissionTexRows2("Rows", Float) = 1.0
+        _EmissionTexRows3("Rows", Float) = 1.0
+        _EmissionTexRows4("Rows", Float) = 1.0
+        _EmissionTexRows5("Rows", Float) = 1.0
+        _EmissionTexRows6("Rows", Float) = 1.0
+        _EmissionTexRows7("Rows", Float) = 1.0
+        _EmissionTexRows8("Rows", Float) = 1.0
+        _EmissionTexRows9("Rows", Float) = 1.0
+        _EmissionTexRows10("Rows", Float) = 1.0
+
+        _EmissionTexSpeed1("Speed", Float) = 0.0
+        _EmissionTexSpeed2("Speed", Float) = 0.0
+        _EmissionTexSpeed3("Speed", Float) = 0.0
+        _EmissionTexSpeed4("Speed", Float) = 0.0
+        _EmissionTexSpeed5("Speed", Float) = 0.0
+        _EmissionTexSpeed6("Speed", Float) = 0.0
+        _EmissionTexSpeed7("Speed", Float) = 0.0
+        _EmissionTexSpeed8("Speed", Float) = 0.0
+        _EmissionTexSpeed9("Speed", Float) = 0.0
+        _EmissionTexSpeed10("Speed", Float) = 0.0
+
+        _EmissionTexFrameIND1("Start Frame", Float) = 0.0
+        _EmissionTexFrameIND2("Start Frame", Float) = 0.0
+        _EmissionTexFrameIND3("Start Frame", Float) = 0.0
+        _EmissionTexFrameIND4("Start Frame", Float) = 0.0
+        _EmissionTexFrameIND5("Start Frame", Float) = 0.0
+        _EmissionTexFrameIND6("Start Frame", Float) = 0.0
+        _EmissionTexFrameIND7("Start Frame", Float) = 0.0
+        _EmissionTexFrameIND8("Start Frame", Float) = 0.0
+        _EmissionTexFrameIND9("Start Frame", Float) = 0.0
+        _EmissionTexFrameIND10("Start Frame", Float) = 0.0
+
+        _EmissionTexFrameIND1("End Frame", Float) = 0.0
+        _EmissionTexFrameIND2("End Frame", Float) = 0.0
+        _EmissionTexFrameIND3("End Frame", Float) = 0.0
+        _EmissionTexFrameIND4("End Frame", Float) = 0.0
+        _EmissionTexFrameIND5("End Frame", Float) = 0.0
+        _EmissionTexFrameIND6("End Frame", Float) = 0.0
+        _EmissionTexFrameIND7("End Frame", Float) = 0.0
+        _EmissionTexFrameIND8("End Frame", Float) = 0.0
+        _EmissionTexFrameIND9("End Frame", Float) = 0.0
+        _EmissionTexFrameIND10("End Frame", Float) = 0.0
+        //End EmissionTex Flipbook Settings
 
         [NoScaleOffset] _ShadeTex2("Shade Texture", 2D) = "white" {}
         [NoScaleOffset] _ShadeTex3("Shade Texture", 2D) = "white" {}
@@ -112,163 +286,170 @@ Shader "VRM/MToon_MultiTexture"
         [HDR]_EmissionColor10("Emissive Color", Color) = (0, 0, 0, 0)
 
 
-        [NoScaleOffset] _ShadeTexture ("Shade Texture", 2D) = "white" {}
-        _BumpScale ("Normal Scale", Float) = 1.0
-        [Normal] _BumpMap ("Normal Texture", 2D) = "bump" {}
-        _ReceiveShadowRate ("Receive Shadow", Range(0, 1)) = 1
-        [NoScaleOffset] _ReceiveShadowTexture ("Receive Shadow Texture", 2D) = "white" {}
-        _ShadingGradeRate ("Shading Grade", Range(0, 1)) = 1
-        [NoScaleOffset] _ShadingGradeTexture ("Shading Grade Texture", 2D) = "white" {}
-        _ShadeShift ("Shade Shift", Range(-1, 1)) = 0
-        _ShadeToony ("Shade Toony", Range(0, 1)) = 0.9
-        _LightColorAttenuation ("Light Color Attenuation", Range(0, 1)) = 0
-        _IndirectLightIntensity ("Indirect Light Intensity", Range(0, 1)) = 0.1
-        [HDR] _RimColor ("Rim Color", Color) = (0,0,0)
-        [NoScaleOffset] _RimTexture ("Rim Texture", 2D) = "white" {}
-        _RimLightingMix ("Rim Lighting Mix", Range(0, 1)) = 0
-        [PowerSlider(4.0)] _RimFresnelPower ("Rim Fresnel Power", Range(0, 100)) = 1
-        _RimLift ("Rim Lift", Range(0, 1)) = 0
-        [NoScaleOffset] _SphereAdd ("Sphere Texture(Add)", 2D) = "black" {}
-        [HDR] _EmissionColor ("Color", Color) = (0,0,0)
-        [NoScaleOffset] _EmissionMap ("Emission", 2D) = "white" {}
-        [NoScaleOffset] _OutlineWidthTexture ("Outline Width Tex", 2D) = "white" {}
-        _OutlineWidth ("Outline Width", Range(0.01, 1)) = 0.5
-        _OutlineScaledMaxDistance ("Outline Scaled Max Distance", Range(1, 10)) = 1
-        _OutlineColor ("Outline Color", Color) = (0,0,0,1)
-        _OutlineLightingMix ("Outline Lighting Mix", Range(0, 1)) = 1
-        [NoScaleOffset] _UvAnimMaskTexture ("UV Animation Mask", 2D) = "white" {}
-        _UvAnimScrollX ("UV Animation Scroll X", Float) = 0
-        _UvAnimScrollY ("UV Animation Scroll Y", Float) = 0
-        _UvAnimRotation ("UV Animation Rotation", Float) = 0
+        [NoScaleOffset] _ShadeTexture("Shade Texture", 2D) = "white" {}
+        _BumpScale("Normal Scale", Float) = 1.0
+        [Normal] _BumpMap("Normal Texture", 2D) = "bump" {}
+        _ReceiveShadowRate("Receive Shadow", Range(0, 1)) = 1
+        [NoScaleOffset] _ReceiveShadowTexture("Receive Shadow Texture", 2D) = "white" {}
+        _ShadingGradeRate("Shading Grade", Range(0, 1)) = 1
+        [NoScaleOffset] _ShadingGradeTexture("Shading Grade Texture", 2D) = "white" {}
+        _ShadeShift("Shade Shift", Range(-1, 1)) = 0
+        _ShadeToony("Shade Toony", Range(0, 1)) = 0.9
+        _LightColorAttenuation("Light Color Attenuation", Range(0, 1)) = 0
+        _IndirectLightIntensity("Indirect Light Intensity", Range(0, 1)) = 0.1
+        [HDR] _RimColor("Rim Color", Color) = (0,0,0)
+        [NoScaleOffset] _RimTexture("Rim Texture", 2D) = "white" {}
+        _RimLightingMix("Rim Lighting Mix", Range(0, 1)) = 0
+        [PowerSlider(4.0)] _RimFresnelPower("Rim Fresnel Power", Range(0, 100)) = 1
+        _RimLift("Rim Lift", Range(0, 1)) = 0
+        [NoScaleOffset] _SphereAdd("Sphere Texture(Add)", 2D) = "black" {}
+        [HDR] _EmissionColor("Color", Color) = (0,0,0)
+        [NoScaleOffset] _EmissionMap("Emission", 2D) = "white" {}
+        [NoScaleOffset] _OutlineWidthTexture("Outline Width Tex", 2D) = "white" {}
+        _OutlineWidth("Outline Width", Range(0.01, 1)) = 0.5
+        _OutlineScaledMaxDistance("Outline Scaled Max Distance", Range(1, 10)) = 1
+        _OutlineColor("Outline Color", Color) = (0,0,0,1)
+        _OutlineLightingMix("Outline Lighting Mix", Range(0, 1)) = 1
+        [NoScaleOffset] _UvAnimMaskTexture("UV Animation Mask", 2D) = "white" {}
+        _UvAnimScrollX("UV Animation Scroll X", Float) = 0
+        _UvAnimScrollY("UV Animation Scroll Y", Float) = 0
+        _UvAnimRotation("UV Animation Rotation", Float) = 0
 
-        [HideInInspector] _MToonVersion ("_MToonVersion", Float) = 35
-        [HideInInspector] _DebugMode ("_DebugMode", Float) = 0.0
-        [HideInInspector] _BlendMode ("_BlendMode", Float) = 0.0
-        [HideInInspector] _OutlineWidthMode ("_OutlineWidthMode", Float) = 0.0
-        [HideInInspector] _OutlineColorMode ("_OutlineColorMode", Float) = 0.0
-        [HideInInspector] _CullMode ("_CullMode", Float) = 2.0
-        [HideInInspector] _OutlineCullMode ("_OutlineCullMode", Float) = 1.0
-        [HideInInspector] _SrcBlend ("_SrcBlend", Float) = 1.0
-        [HideInInspector] _DstBlend ("_DstBlend", Float) = 0.0
-        [HideInInspector] _ZWrite ("_ZWrite", Float) = 1.0
-        [HideInInspector] _AlphaToMask ("_AlphaToMask", Float) = 0.0
+        [HideInInspector] _MToonVersion("_MToonVersion", Float) = 35
+        [HideInInspector] _DebugMode("_DebugMode", Float) = 0.0
+        [HideInInspector] _BlendMode("_BlendMode", Float) = 0.0
+        [HideInInspector] _OutlineWidthMode("_OutlineWidthMode", Float) = 0.0
+        [HideInInspector] _OutlineColorMode("_OutlineColorMode", Float) = 0.0
+        [HideInInspector] _CullMode("_CullMode", Float) = 2.0
+        [HideInInspector] _OutlineCullMode("_OutlineCullMode", Float) = 1.0
+        [HideInInspector] _SrcBlend("_SrcBlend", Float) = 1.0
+        [HideInInspector] _DstBlend("_DstBlend", Float) = 0.0
+        [HideInInspector] _ZWrite("_ZWrite", Float) = 1.0
+        [HideInInspector] _AlphaToMask("_AlphaToMask", Float) = 0.0
     }
 
-    
-    // for SM 3.0
-    SubShader
-    {
-        Tags { "RenderType" = "Opaque"  "Queue" = "Geometry" }
 
-        // Forward Base
-        Pass
+        // for SM 3.0
+            SubShader
         {
-            Name "FORWARD_BASE"
-            Tags { "LightMode" = "ForwardBase" }
+            Tags { "RenderType" = "Opaque"  "Queue" = "Geometry+2" }
 
-            Cull[_CullMode]
-            Blend[_SrcBlend][_DstBlend]
-            ZWrite[_ZWrite]
-            ZTest LEqual
-            BlendOp Add, Max
-            AlphaToMask[_AlphaToMask]
+            Cull Back
+            ZTest Always
+            Stencil {
+                Ref[_StencilID]
+                Comp notequal
+            }
 
-            CGPROGRAM
-            #pragma target 3.0
-            #pragma shader_feature _ MTOON_DEBUG_NORMAL MTOON_DEBUG_LITSHADERATE
-            #pragma multi_compile _ _NORMALMAP
-            #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON
-            #include "./MToonSM3_MultiTexture.cginc"
-            #pragma vertex vert_forward_base
-            #pragma fragment frag_forward
-            #pragma multi_compile_fwdbase
-            #pragma multi_compile_fog
-//            #pragma multi_compile_instancing
+            // Forward Base
+            Pass
+            {
+                Name "FORWARD_BASE"
+                Tags { "LightMode" = "ForwardBase" }
 
-            ENDCG
+                Cull[_CullMode]
+                Blend[_SrcBlend][_DstBlend]
+                ZWrite[_ZWrite]
+                ZTest LEqual
+                BlendOp Add, Max
+                AlphaToMask[_AlphaToMask]
+
+                CGPROGRAM
+                #pragma target 3.0
+                #pragma shader_feature _ MTOON_DEBUG_NORMAL MTOON_DEBUG_LITSHADERATE
+                #pragma multi_compile _ _NORMALMAP
+                #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON
+                #include "./MToonSM3_MultiTexture.cginc"
+                #pragma vertex vert_forward_base
+                #pragma fragment frag_forward
+                #pragma multi_compile_fwdbase
+                #pragma multi_compile_fog
+            //            #pragma multi_compile_instancing
+
+                        ENDCG
+                    }
+
+
+            // Forward Base Outline Pass
+            Pass
+            {
+                Name "FORWARD_BASE_ONLY_OUTLINE"
+                Tags { "LightMode" = "ForwardBase" }
+
+                Cull[_OutlineCullMode]
+                Blend[_SrcBlend][_DstBlend]
+                ZWrite[_ZWrite]
+                ZTest LEqual
+                Offset 1, 1
+                BlendOp Add, Max
+                AlphaToMask[_AlphaToMask]
+
+                CGPROGRAM
+                #pragma target 3.0
+                #pragma shader_feature _ MTOON_DEBUG_NORMAL MTOON_DEBUG_LITSHADERATE
+                #pragma multi_compile _ MTOON_OUTLINE_WIDTH_WORLD MTOON_OUTLINE_WIDTH_SCREEN
+                #pragma multi_compile _ MTOON_OUTLINE_COLOR_FIXED MTOON_OUTLINE_COLOR_MIXED
+                #pragma multi_compile _ _NORMALMAP
+                #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON
+                #define MTOON_CLIP_IF_OUTLINE_IS_NONE
+                #include "./MToonSM3_MultiTexture.cginc"
+                #pragma vertex vert_forward_base_outline
+                #pragma fragment frag_forward
+                #pragma multi_compile_fwdbase
+                #pragma multi_compile_fog
+            //            #pragma multi_compile_instancing
+                        ENDCG
+                    }
+
+
+            // Forward Add
+            Pass
+            {
+                Name "FORWARD_ADD"
+                Tags { "LightMode" = "ForwardAdd" }
+
+                Cull[_CullMode]
+                Blend[_SrcBlend] One
+                ZWrite Off
+                ZTest LEqual
+                BlendOp Add, Max
+                AlphaToMask[_AlphaToMask]
+
+                CGPROGRAM
+                #pragma target 3.0
+                #pragma shader_feature _ MTOON_DEBUG_NORMAL MTOON_DEBUG_LITSHADERATE
+                #pragma multi_compile _ _NORMALMAP
+                #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON
+                #define MTOON_FORWARD_ADD
+                #include "./MToonSM3_MultiTexture.cginc"
+                #pragma vertex vert_forward_add
+                #pragma fragment frag_forward
+                #pragma multi_compile_fwdadd_fullshadows
+                #pragma multi_compile_fog
+                ENDCG
+            }
+
+            //  Shadow rendering pass
+            Pass
+            {
+                Name "ShadowCaster"
+                Tags { "LightMode" = "ShadowCaster" }
+
+                Cull[_CullMode]
+                ZWrite On
+                ZTest LEqual
+
+                CGPROGRAM
+                #pragma target 3.0
+                #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON
+                #pragma multi_compile_shadowcaster
+                #pragma vertex vertShadowCaster
+                #pragma fragment fragShadowCaster
+                #include "UnityStandardShadow.cginc"
+                ENDCG
+            }
         }
-        
-        
-        // Forward Base Outline Pass
-        Pass 
-        {
-            Name "FORWARD_BASE_ONLY_OUTLINE"
-            Tags { "LightMode" = "ForwardBase" }
 
-            Cull [_OutlineCullMode]
-            Blend [_SrcBlend] [_DstBlend]
-            ZWrite [_ZWrite]
-            ZTest LEqual
-            Offset 1, 1
-            BlendOp Add, Max
-            AlphaToMask [_AlphaToMask]
-
-            CGPROGRAM
-            #pragma target 3.0
-            #pragma shader_feature _ MTOON_DEBUG_NORMAL MTOON_DEBUG_LITSHADERATE
-            #pragma multi_compile _ MTOON_OUTLINE_WIDTH_WORLD MTOON_OUTLINE_WIDTH_SCREEN
-            #pragma multi_compile _ MTOON_OUTLINE_COLOR_FIXED MTOON_OUTLINE_COLOR_MIXED
-            #pragma multi_compile _ _NORMALMAP
-            #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON
-            #define MTOON_CLIP_IF_OUTLINE_IS_NONE
-            #include "./MToonSM3_MultiTexture.cginc"
-            #pragma vertex vert_forward_base_outline
-            #pragma fragment frag_forward
-            #pragma multi_compile_fwdbase
-            #pragma multi_compile_fog
-//            #pragma multi_compile_instancing
-            ENDCG
-        }
-
-        
-        // Forward Add
-        Pass 
-        {
-            Name "FORWARD_ADD"
-            Tags { "LightMode" = "ForwardAdd" }
-
-            Cull [_CullMode]
-            Blend [_SrcBlend] One
-            ZWrite Off
-            ZTest LEqual
-            BlendOp Add, Max
-            AlphaToMask [_AlphaToMask]
-
-            CGPROGRAM
-            #pragma target 3.0
-            #pragma shader_feature _ MTOON_DEBUG_NORMAL MTOON_DEBUG_LITSHADERATE
-            #pragma multi_compile _ _NORMALMAP
-            #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON
-            #define MTOON_FORWARD_ADD
-            #include "./MToonSM3_MultiTexture.cginc"
-            #pragma vertex vert_forward_add
-            #pragma fragment frag_forward
-            #pragma multi_compile_fwdadd_fullshadows
-            #pragma multi_compile_fog
-            ENDCG
-        }
-        
-        //  Shadow rendering pass
-        Pass
-        {
-            Name "ShadowCaster"
-            Tags { "LightMode" = "ShadowCaster" }
-
-            Cull [_CullMode]
-            ZWrite On
-            ZTest LEqual
-
-            CGPROGRAM
-            #pragma target 3.0
-            #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON
-            #pragma multi_compile_shadowcaster
-            #pragma vertex vertShadowCaster
-            #pragma fragment fragShadowCaster
-            #include "UnityStandardShadow.cginc"
-            ENDCG
-        }
-    }
-    
-    Fallback "Unlit/Texture"
-    CustomEditor "MToon.MToonInspector_MultiTexture"
+            Fallback "Unlit/Texture"
+            CustomEditor "MToon.MToonInspector_MultiTexture"
 }
