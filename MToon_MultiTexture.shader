@@ -116,6 +116,17 @@ Shader "VRM/MToon_MultiTexture"
         _MainTexEndFrameIND8("End Frame", Float) = 0.0
         _MainTexEndFrameIND9("End Frame", Float) = 0.0
         _MainTexEndFrameIND10("End Frame", Float) = 0.0
+
+        [HideInInspector] _MainTexWrapMode1("Main Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _MainTexWrapMode2("Main Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _MainTexWrapMode3("Main Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _MainTexWrapMode4("Main Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _MainTexWrapMode5("Main Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _MainTexWrapMode6("Main Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _MainTexWrapMode7("Main Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _MainTexWrapMode8("Main Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _MainTexWrapMode9("Main Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _MainTexWrapMode10("Main Texture Wrap Mode", Float) = 0.0
         //End MainTex Flipbook Settings
 
         //Begin DecalTex Flipbook Settings
@@ -173,6 +184,17 @@ Shader "VRM/MToon_MultiTexture"
         _DecalTexEndFrameIND8("End Frame", Float) = 0.0
         _DecalTexEndFrameIND9("End Frame", Float) = 0.0
         _DecalTexEndFrameIND10("End Frame", Float) = 0.0
+
+        [HideInInspector] _DecalTexWrapMode1("Decal Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _DecalTexWrapMode2("Decal Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _DecalTexWrapMode3("Decal Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _DecalTexWrapMode4("Decal Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _DecalTexWrapMode5("Decal Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _DecalTexWrapMode6("Decal Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _DecalTexWrapMode7("Decal Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _DecalTexWrapMode8("Decal Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _DecalTexWrapMode9("Decal Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _DecalTexWrapMode10("Decal Texture Wrap Mode", Float) = 0.0
         //End DecalTex Flipbook Settings
 
         //Begin EmissionTex Flipbook Settings
@@ -230,6 +252,17 @@ Shader "VRM/MToon_MultiTexture"
         _EmissionTexFrameIND8("End Frame", Float) = 0.0
         _EmissionTexFrameIND9("End Frame", Float) = 0.0
         _EmissionTexFrameIND10("End Frame", Float) = 0.0
+
+        [HideInInspector] _EmissionTexWrapMode1("Emission Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _EmissionTexWrapMode2("Emission Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _EmissionTexWrapMode3("Emission Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _EmissionTexWrapMode4("Emission Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _EmissionTexWrapMode5("Emission Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _EmissionTexWrapMode6("Emission Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _EmissionTexWrapMode7("Emission Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _EmissionTexWrapMode8("Emission Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _EmissionTexWrapMode9("Emission Texture Wrap Mode", Float) = 0.0
+        [HideInInspector] _EmissionTexWrapMode10("Emission Texture Wrap Mode", Float) = 0.0
         //End EmissionTex Flipbook Settings
 
         [NoScaleOffset] _ShadeTex2("Shade Texture", 2D) = "white" {}

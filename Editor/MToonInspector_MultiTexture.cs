@@ -13,7 +13,7 @@ namespace MToon
 
         private static bool isAdvancedLightingPanelFoldout = false;
         private static EditorRotationUnit editorRotationUnit = EditorRotationUnit.Rounds;
-        
+
         private MaterialProperty _version;
         private MaterialProperty _blendMode;
         private MaterialProperty _bumpMap;
@@ -90,6 +90,31 @@ namespace MToon
         private MaterialProperty _mainTexEndFrameIND8;
         private MaterialProperty _mainTexEndFrameIND9;
         private MaterialProperty _mainTexEndFrameIND10;
+
+        private static EditorWrapMode MainTexWrapMode1;
+        private static EditorWrapMode MainTexWrapMode2;
+        private static EditorWrapMode MainTexWrapMode3;
+        private static EditorWrapMode MainTexWrapMode4;
+        private static EditorWrapMode MainTexWrapMode5;
+        private static EditorWrapMode MainTexWrapMode6;
+        private static EditorWrapMode MainTexWrapMode7;
+        private static EditorWrapMode MainTexWrapMode8;
+        private static EditorWrapMode MainTexWrapMode9;
+        private static EditorWrapMode MainTexWrapMode10;
+
+        private MaterialProperty _mainTexWrapMode1;
+        private MaterialProperty _mainTexWrapMode2;
+        private MaterialProperty _mainTexWrapMode3;
+        private MaterialProperty _mainTexWrapMode4;
+        private MaterialProperty _mainTexWrapMode5;
+        private MaterialProperty _mainTexWrapMode6;
+        private MaterialProperty _mainTexWrapMode7;
+        private MaterialProperty _mainTexWrapMode8;
+        private MaterialProperty _mainTexWrapMode9;
+        private MaterialProperty _mainTexWrapMode10;
+
+        //private static EditorWrapMode _mainTexWrapMode1 = EditorWrapMode.Repeat;
+
         //End MainTex Flipbook Settings
 
         //Begin Decal Flipbook Settings
@@ -158,6 +183,28 @@ namespace MToon
         private MaterialProperty _decalTexEndFrameIND8;
         private MaterialProperty _decalTexEndFrameIND9;
         private MaterialProperty _decalTexEndFrameIND10;
+
+        private static EditorWrapMode DecalTexWrapMode1;
+        private static EditorWrapMode DecalTexWrapMode2;
+        private static EditorWrapMode DecalTexWrapMode3;
+        private static EditorWrapMode DecalTexWrapMode4;
+        private static EditorWrapMode DecalTexWrapMode5;
+        private static EditorWrapMode DecalTexWrapMode6;
+        private static EditorWrapMode DecalTexWrapMode7;
+        private static EditorWrapMode DecalTexWrapMode8;
+        private static EditorWrapMode DecalTexWrapMode9;
+        private static EditorWrapMode DecalTexWrapMode10;
+
+        private MaterialProperty _decalTexWrapMode1;
+        private MaterialProperty _decalTexWrapMode2;
+        private MaterialProperty _decalTexWrapMode3;
+        private MaterialProperty _decalTexWrapMode4;
+        private MaterialProperty _decalTexWrapMode5;
+        private MaterialProperty _decalTexWrapMode6;
+        private MaterialProperty _decalTexWrapMode7;
+        private MaterialProperty _decalTexWrapMode8;
+        private MaterialProperty _decalTexWrapMode9;
+        private MaterialProperty _decalTexWrapMode10;
         //End DecalTex Flipbook Settings
 
         //Begin Decal Flipbook Settings
@@ -226,6 +273,28 @@ namespace MToon
         private MaterialProperty _emissionTexEndFrameIND8;
         private MaterialProperty _emissionTexEndFrameIND9;
         private MaterialProperty _emissionTexEndFrameIND10;
+
+        private static EditorWrapMode EmissionTexWrapMode1;
+        private static EditorWrapMode EmissionTexWrapMode2;
+        private static EditorWrapMode EmissionTexWrapMode3;
+        private static EditorWrapMode EmissionTexWrapMode4;
+        private static EditorWrapMode EmissionTexWrapMode5;
+        private static EditorWrapMode EmissionTexWrapMode6;
+        private static EditorWrapMode EmissionTexWrapMode7;
+        private static EditorWrapMode EmissionTexWrapMode8;
+        private static EditorWrapMode EmissionTexWrapMode9;
+        private static EditorWrapMode EmissionTexWrapMode10;
+
+        private MaterialProperty _emissionTexWrapMode1;
+        private MaterialProperty _emissionTexWrapMode2;
+        private MaterialProperty _emissionTexWrapMode3;
+        private MaterialProperty _emissionTexWrapMode4;
+        private MaterialProperty _emissionTexWrapMode5;
+        private MaterialProperty _emissionTexWrapMode6;
+        private MaterialProperty _emissionTexWrapMode7;
+        private MaterialProperty _emissionTexWrapMode8;
+        private MaterialProperty _emissionTexWrapMode9;
+        private MaterialProperty _emissionTexWrapMode10;
         //End DecalTex Flipbook Settings
 
         private MaterialProperty _mainColor2;
@@ -373,6 +442,13 @@ namespace MToon
         private MaterialProperty _uvAnimScrollY;
         private MaterialProperty _uvAnimRotation;
 
+        private enum EditorWrapMode
+        {
+
+            Repeat = 0,
+            Clamp = 2
+
+        }
         public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] properties)
         {
             _version = FindProperty(Utils.PropVersion, properties);
@@ -440,6 +516,17 @@ namespace MToon
             _mainTexEndFrameIND8 = FindProperty("_MainTexEndFrameIND8", properties);
             _mainTexEndFrameIND9 = FindProperty("_MainTexEndFrameIND9", properties);
             _mainTexEndFrameIND10 = FindProperty("_MainTexEndFrameIND10", properties);
+
+            _mainTexWrapMode1 = FindProperty("_MainTexWrapMode1", properties);
+            _mainTexWrapMode2 = FindProperty("_MainTexWrapMode2", properties);
+            _mainTexWrapMode3 = FindProperty("_MainTexWrapMode3", properties);
+            _mainTexWrapMode4 = FindProperty("_MainTexWrapMode4", properties);
+            _mainTexWrapMode5 = FindProperty("_MainTexWrapMode5", properties);
+            _mainTexWrapMode6 = FindProperty("_MainTexWrapMode6", properties);
+            _mainTexWrapMode7 = FindProperty("_MainTexWrapMode7", properties);
+            _mainTexWrapMode8 = FindProperty("_MainTexWrapMode8", properties);
+            _mainTexWrapMode9 = FindProperty("_MainTexWrapMode9", properties);
+            _mainTexWrapMode10 = FindProperty("_MainTexWrapMode10", properties);
             //End MainTex Flipbook Settings
 
             //Begin Decal Flipbook Settings
@@ -497,9 +584,20 @@ namespace MToon
             _decalTexEndFrameIND8 = FindProperty("_DecalTexEndFrameIND8", properties);
             _decalTexEndFrameIND9 = FindProperty("_DecalTexEndFrameIND9", properties);
             _decalTexEndFrameIND10 = FindProperty("_DecalTexEndFrameIND10", properties);
+
+            _decalTexWrapMode1 = FindProperty("_DecalTexWrapMode1", properties);
+            _decalTexWrapMode2 = FindProperty("_DecalTexWrapMode2", properties);
+            _decalTexWrapMode3 = FindProperty("_DecalTexWrapMode3", properties);
+            _decalTexWrapMode4 = FindProperty("_DecalTexWrapMode4", properties);
+            _decalTexWrapMode5 = FindProperty("_DecalTexWrapMode5", properties);
+            _decalTexWrapMode6 = FindProperty("_DecalTexWrapMode6", properties);
+            _decalTexWrapMode7 = FindProperty("_DecalTexWrapMode7", properties);
+            _decalTexWrapMode8 = FindProperty("_DecalTexWrapMode8", properties);
+            _decalTexWrapMode9 = FindProperty("_DecalTexWrapMode9", properties);
+            _decalTexWrapMode10 = FindProperty("_DecalTexWrapMode10", properties);
             //End Decal Flipbook Settings
 
-            //Begin Decal Flipbook Settings
+            //Begin Emission Flipbook Settings
             _emissionTexColumns1 = FindProperty("_EmissionTexColumns1", properties);
             _emissionTexColumns2 = FindProperty("_EmissionTexColumns2", properties);
             _emissionTexColumns3 = FindProperty("_EmissionTexColumns3", properties);
@@ -554,7 +652,18 @@ namespace MToon
             _emissionTexEndFrameIND8 = FindProperty("_EmissionTexFrameIND8", properties);
             _emissionTexEndFrameIND9 = FindProperty("_EmissionTexFrameIND9", properties);
             _emissionTexEndFrameIND10 = FindProperty("_EmissionTexFrameIND10", properties);
-            //End Decal Flipbook Settings
+
+            _emissionTexWrapMode1 = FindProperty("_EmissionTexWrapMode1", properties);
+            _emissionTexWrapMode2 = FindProperty("_EmissionTexWrapMode2", properties);
+            _emissionTexWrapMode3 = FindProperty("_EmissionTexWrapMode3", properties);
+            _emissionTexWrapMode4 = FindProperty("_EmissionTexWrapMode4", properties);
+            _emissionTexWrapMode5 = FindProperty("_EmissionTexWrapMode5", properties);
+            _emissionTexWrapMode6 = FindProperty("_EmissionTexWrapMode6", properties);
+            _emissionTexWrapMode7 = FindProperty("_EmissionTexWrapMode7", properties);
+            _emissionTexWrapMode8 = FindProperty("_EmissionTexWrapMode8", properties);
+            _emissionTexWrapMode9 = FindProperty("_EmissionTexWrapMode9", properties);
+            _emissionTexWrapMode10 = FindProperty("_EmissionTexWrapMode10", properties);
+            //End Emission Flipbook Settings
 
             _amountTex2 = FindProperty("_AmountTex2", properties);
             _amountTex3 = FindProperty("_AmountTex3", properties);
@@ -764,6 +873,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_mainTexSpeed1, "Speed");
                             materialEditor.ShaderProperty(_mainTexFrameIND1, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_mainTexEndFrameIND1, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode1, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -782,6 +894,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_mainTexSpeed2, "Speed");
                             materialEditor.ShaderProperty(_mainTexFrameIND2, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_mainTexEndFrameIND2, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode2, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -800,6 +915,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_mainTexSpeed3, "Speed");
                             materialEditor.ShaderProperty(_mainTexFrameIND3, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_mainTexEndFrameIND3, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode3, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -818,6 +936,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_mainTexSpeed4, "Speed");
                             materialEditor.ShaderProperty(_mainTexFrameIND4, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_mainTexEndFrameIND4, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode4, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -836,6 +957,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_mainTexSpeed5, "Speed");
                             materialEditor.ShaderProperty(_mainTexFrameIND5, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_mainTexEndFrameIND5, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode5, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -854,6 +978,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_mainTexSpeed6, "Speed");
                             materialEditor.ShaderProperty(_mainTexFrameIND6, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_mainTexEndFrameIND6, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode6, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -872,6 +999,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_mainTexSpeed7, "Speed");
                             materialEditor.ShaderProperty(_mainTexFrameIND7, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_mainTexEndFrameIND7, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode7, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -890,6 +1020,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_mainTexSpeed8, "Speed");
                             materialEditor.ShaderProperty(_mainTexFrameIND8, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_mainTexEndFrameIND8, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode8, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -908,6 +1041,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_mainTexSpeed9, "Speed");
                             materialEditor.ShaderProperty(_mainTexFrameIND9, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_mainTexEndFrameIND9, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode9, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -926,6 +1062,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_mainTexSpeed10, "Speed");
                             materialEditor.ShaderProperty(_mainTexFrameIND10, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_mainTexEndFrameIND10, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode10, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -997,6 +1136,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_decalTexSpeed1, "Speed");
                             materialEditor.ShaderProperty(_decalTexFrameIND1, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_decalTexEndFrameIND1, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode1, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -1015,6 +1157,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_decalTexSpeed2, "Speed");
                             materialEditor.ShaderProperty(_decalTexFrameIND2, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_decalTexEndFrameIND2, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode2, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -1033,6 +1178,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_decalTexSpeed3, "Speed");
                             materialEditor.ShaderProperty(_decalTexFrameIND3, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_decalTexEndFrameIND3, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode3, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -1051,6 +1199,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_decalTexSpeed4, "Speed");
                             materialEditor.ShaderProperty(_decalTexFrameIND4, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_decalTexEndFrameIND4, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode4, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -1069,6 +1220,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_decalTexSpeed5, "Speed");
                             materialEditor.ShaderProperty(_decalTexFrameIND5, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_decalTexEndFrameIND5, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode5, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -1087,6 +1241,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_decalTexSpeed6, "Speed");
                             materialEditor.ShaderProperty(_decalTexFrameIND6, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_decalTexEndFrameIND6, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode6, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -1105,6 +1262,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_decalTexSpeed7, "Speed");
                             materialEditor.ShaderProperty(_decalTexFrameIND7, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_decalTexEndFrameIND7, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode7, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -1123,6 +1283,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_decalTexSpeed8, "Speed");
                             materialEditor.ShaderProperty(_decalTexFrameIND8, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_decalTexEndFrameIND8, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode8, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -1141,6 +1304,8 @@ namespace MToon
                             materialEditor.ShaderProperty(_decalTexSpeed9, "Speed");
                             materialEditor.ShaderProperty(_decalTexFrameIND9, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_decalTexEndFrameIND9, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode9, materialEditor);
                             EditorGUILayout.Space();
 
                         }
@@ -1159,6 +1324,9 @@ namespace MToon
                             materialEditor.ShaderProperty(_decalTexSpeed10, "Speed");
                             materialEditor.ShaderProperty(_decalTexFrameIND10, "Start/Selected Frame");
                             materialEditor.ShaderProperty(_decalTexEndFrameIND10, "End Frame");
+
+                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode10, materialEditor);
+
                             EditorGUILayout.Space();
 
                         }
@@ -1255,6 +1423,9 @@ namespace MToon
                         materialEditor.ShaderProperty(_emissionTexSpeed1, "Speed");
                         materialEditor.ShaderProperty(_emissionTexFrameIND1, "Start/Selected Frame");
                         materialEditor.ShaderProperty(_emissionTexEndFrameIND1, "End Frame");
+
+                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode1, materialEditor);
+
                         EditorGUILayout.Space();
 
                     }
@@ -1273,6 +1444,9 @@ namespace MToon
                         materialEditor.ShaderProperty(_emissionTexSpeed2, "Speed");
                         materialEditor.ShaderProperty(_emissionTexFrameIND2, "Start/Selected Frame");
                         materialEditor.ShaderProperty(_emissionTexEndFrameIND2, "End Frame");
+
+                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode2, materialEditor);
+
                         EditorGUILayout.Space();
 
                     }
@@ -1291,6 +1465,9 @@ namespace MToon
                         materialEditor.ShaderProperty(_emissionTexSpeed3, "Speed");
                         materialEditor.ShaderProperty(_emissionTexFrameIND3, "Start/Selected Frame");
                         materialEditor.ShaderProperty(_emissionTexEndFrameIND3, "End Frame");
+
+                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode3, materialEditor);
+
                         EditorGUILayout.Space();
 
                     }
@@ -1309,6 +1486,9 @@ namespace MToon
                         materialEditor.ShaderProperty(_emissionTexSpeed4, "Speed");
                         materialEditor.ShaderProperty(_emissionTexFrameIND4, "Start/Selected Frame");
                         materialEditor.ShaderProperty(_emissionTexEndFrameIND4, "End Frame");
+
+                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode4, materialEditor);
+
                         EditorGUILayout.Space();
 
                     }
@@ -1327,6 +1507,9 @@ namespace MToon
                         materialEditor.ShaderProperty(_emissionTexSpeed5, "Speed");
                         materialEditor.ShaderProperty(_emissionTexFrameIND5, "Start/Selected Frame");
                         materialEditor.ShaderProperty(_emissionTexEndFrameIND5, "End Frame");
+
+                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode5, materialEditor);
+
                         EditorGUILayout.Space();
 
                     }
@@ -1345,6 +1528,9 @@ namespace MToon
                         materialEditor.ShaderProperty(_emissionTexSpeed6, "Speed");
                         materialEditor.ShaderProperty(_emissionTexFrameIND6, "Start/Selected Frame");
                         materialEditor.ShaderProperty(_emissionTexEndFrameIND6, "End Frame");
+
+                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode6, materialEditor);
+
                         EditorGUILayout.Space();
 
                     }
@@ -1363,6 +1549,9 @@ namespace MToon
                         materialEditor.ShaderProperty(_emissionTexSpeed7, "Speed");
                         materialEditor.ShaderProperty(_emissionTexFrameIND7, "Start/Selected Frame");
                         materialEditor.ShaderProperty(_emissionTexEndFrameIND7, "End Frame");
+
+                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode7, materialEditor);
+
                         EditorGUILayout.Space();
 
                     }
@@ -1381,6 +1570,9 @@ namespace MToon
                         materialEditor.ShaderProperty(_emissionTexSpeed8, "Speed");
                         materialEditor.ShaderProperty(_emissionTexFrameIND8, "Start/Selected Frame");
                         materialEditor.ShaderProperty(_emissionTexEndFrameIND8, "End Frame");
+
+                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode8, materialEditor);
+
                         EditorGUILayout.Space();
 
                     }
@@ -1399,6 +1591,9 @@ namespace MToon
                         materialEditor.ShaderProperty(_emissionTexSpeed9, "Speed");
                         materialEditor.ShaderProperty(_emissionTexFrameIND9, "Start/Selected Frame");
                         materialEditor.ShaderProperty(_emissionTexEndFrameIND9, "End Frame");
+
+                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode9, materialEditor);
+
                         EditorGUILayout.Space();
 
                     }
@@ -1417,6 +1612,9 @@ namespace MToon
                         materialEditor.ShaderProperty(_emissionTexSpeed10, "Speed");
                         materialEditor.ShaderProperty(_emissionTexFrameIND10, "Start/Selected Frame");
                         materialEditor.ShaderProperty(_emissionTexEndFrameIND10, "End Frame");
+
+                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode10, materialEditor);
+
                         EditorGUILayout.Space();
 
                     }

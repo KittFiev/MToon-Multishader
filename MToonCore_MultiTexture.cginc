@@ -61,6 +61,17 @@ half _MainTexEndFrameIND7;
 half _MainTexEndFrameIND8;
 half _MainTexEndFrameIND9;
 half _MainTexEndFrameIND10;
+
+half _MainTexWrapMode1;
+half _MainTexWrapMode2;
+half _MainTexWrapMode3;
+half _MainTexWrapMode4;
+half _MainTexWrapMode5;
+half _MainTexWrapMode6;
+half _MainTexWrapMode7;
+half _MainTexWrapMode8;
+half _MainTexWrapMode9;
+half _MainTexWrapMode10;
 //End MainTex Flipbook Settings
 
 //Begin DecalTex Flipbook Settings
@@ -118,6 +129,17 @@ half _DecalTexEndFrameIND7;
 half _DecalTexEndFrameIND8;
 half _DecalTexEndFrameIND9;
 half _DecalTexEndFrameIND10;
+
+half _DecalTexWrapMode1;
+half _DecalTexWrapMode2;
+half _DecalTexWrapMode3;
+half _DecalTexWrapMode4;
+half _DecalTexWrapMode5;
+half _DecalTexWrapMode6;
+half _DecalTexWrapMode7;
+half _DecalTexWrapMode8;
+half _DecalTexWrapMode9;
+half _DecalTexWrapMode10;
 //End DecalTex Flipbook Settings
 
 //Begin EmissionTex Flipbook Settings
@@ -175,6 +197,17 @@ half _EmissionTexEndFrameIND7;
 half _EmissionTexEndFrameIND8;
 half _EmissionTexEndFrameIND9;
 half _EmissionTexEndFrameIND10;
+
+half _EmissionTexWrapMode1;
+half _EmissionTexWrapMode2;
+half _EmissionTexWrapMode3;
+half _EmissionTexWrapMode4;
+half _EmissionTexWrapMode5;
+half _EmissionTexWrapMode6;
+half _EmissionTexWrapMode7;
+half _EmissionTexWrapMode8;
+half _EmissionTexWrapMode9;
+half _EmissionTexWrapMode10;
 //End EmissionTex Flipbook Settings
 
 
@@ -402,11 +435,12 @@ inline v2f InitializeV2F(appdata_full v, float4 projectedVertex, float isOutline
     return o;
 }
 
-inline float2 FlipbookCalculation(float2 UV, float Columns, float Rows, float Speed, float IND, float End) 
+inline float2 FlipbookCalculation(float2 UV, float Columns, float Rows, float Speed, float IND, float End, float WrapMode) 
 {
     
     float ArraySize = Columns * Rows;
     float2 uvcoords = (float2(frac(clamp(UV.x, 0, 1)), frac(clamp(UV.y, 0, 1))));
+    uvcoords = (WrapMode >= 1 ? uvcoords : UV);
     float Temp1 = (fmod( _Time.y, (End >= 0.5 ? End : ArraySize)) * Speed);
     float Temp2 = clamp(IND, 1E-05, (ArraySize - 1.0));
     float Temp3 = frac(((Temp1 + (Temp2 + 1E-05)) / ArraySize));
@@ -486,16 +520,16 @@ float4 frag_forward(v2f i) : SV_TARGET
 	mainTex = lerp(mainTex, UNITY_SAMPLE_TEX2D_SAMPLER(_MainTex9, _MainTex4, mainUv), _AmountTex9);
 	mainTex = lerp(mainTex, UNITY_SAMPLE_TEX2D_SAMPLER(_MainTex10, _MainTex4, mainUv), _AmountTex10);*/
 
-    float2 mainUV1 = FlipbookCalculation(mainUv, _MainTexColumns1, _MainTexRows1, _MainTexSpeed1, _MainTexFrameIND1, _MainTexEndFrameIND1);
-    float2 mainUV2 = FlipbookCalculation(mainUv, _MainTexColumns2, _MainTexRows2, _MainTexSpeed2, _MainTexFrameIND2, _MainTexEndFrameIND2);
-    float2 mainUV3 = FlipbookCalculation(mainUv, _MainTexColumns3, _MainTexRows3, _MainTexSpeed3, _MainTexFrameIND3, _MainTexEndFrameIND3);
-    float2 mainUV4 = FlipbookCalculation(mainUv, _MainTexColumns4, _MainTexRows4, _MainTexSpeed4, _MainTexFrameIND4, _MainTexEndFrameIND4);
-    float2 mainUV5 = FlipbookCalculation(mainUv, _MainTexColumns5, _MainTexRows5, _MainTexSpeed5, _MainTexFrameIND5, _MainTexEndFrameIND5);
-    float2 mainUV6 = FlipbookCalculation(mainUv, _MainTexColumns6, _MainTexRows6, _MainTexSpeed6, _MainTexFrameIND6, _MainTexEndFrameIND6);
-    float2 mainUV7 = FlipbookCalculation(mainUv, _MainTexColumns7, _MainTexRows7, _MainTexSpeed7, _MainTexFrameIND7, _MainTexEndFrameIND7);
-    float2 mainUV8 = FlipbookCalculation(mainUv, _MainTexColumns8, _MainTexRows8, _MainTexSpeed8, _MainTexFrameIND8, _MainTexEndFrameIND8);
-    float2 mainUV9 = FlipbookCalculation(mainUv, _MainTexColumns9, _MainTexRows9, _MainTexSpeed9, _MainTexFrameIND9, _MainTexEndFrameIND9);
-    float2 mainUV10 = FlipbookCalculation(mainUv, _MainTexColumns10, _MainTexRows10, _MainTexSpeed10, _MainTexFrameIND10, _MainTexEndFrameIND10);
+    float2 mainUV1 = FlipbookCalculation(mainUv, _MainTexColumns1, _MainTexRows1, _MainTexSpeed1, _MainTexFrameIND1, _MainTexEndFrameIND1, _MainTexWrapMode1);
+    float2 mainUV2 = FlipbookCalculation(mainUv, _MainTexColumns2, _MainTexRows2, _MainTexSpeed2, _MainTexFrameIND2, _MainTexEndFrameIND2, _MainTexWrapMode2);
+    float2 mainUV3 = FlipbookCalculation(mainUv, _MainTexColumns3, _MainTexRows3, _MainTexSpeed3, _MainTexFrameIND3, _MainTexEndFrameIND3, _MainTexWrapMode3);
+    float2 mainUV4 = FlipbookCalculation(mainUv, _MainTexColumns4, _MainTexRows4, _MainTexSpeed4, _MainTexFrameIND4, _MainTexEndFrameIND4, _MainTexWrapMode4);
+    float2 mainUV5 = FlipbookCalculation(mainUv, _MainTexColumns5, _MainTexRows5, _MainTexSpeed5, _MainTexFrameIND5, _MainTexEndFrameIND5, _MainTexWrapMode5);
+    float2 mainUV6 = FlipbookCalculation(mainUv, _MainTexColumns6, _MainTexRows6, _MainTexSpeed6, _MainTexFrameIND6, _MainTexEndFrameIND6, _MainTexWrapMode6);
+    float2 mainUV7 = FlipbookCalculation(mainUv, _MainTexColumns7, _MainTexRows7, _MainTexSpeed7, _MainTexFrameIND7, _MainTexEndFrameIND7, _MainTexWrapMode7);
+    float2 mainUV8 = FlipbookCalculation(mainUv, _MainTexColumns8, _MainTexRows8, _MainTexSpeed8, _MainTexFrameIND8, _MainTexEndFrameIND8, _MainTexWrapMode8);
+    float2 mainUV9 = FlipbookCalculation(mainUv, _MainTexColumns9, _MainTexRows9, _MainTexSpeed9, _MainTexFrameIND9, _MainTexEndFrameIND9, _MainTexWrapMode9);
+    float2 mainUV10 = FlipbookCalculation(mainUv, _MainTexColumns10, _MainTexRows10, _MainTexSpeed10, _MainTexFrameIND10, _MainTexEndFrameIND10, _MainTexWrapMode10);
 
     half4 mainTex = _MainTex.Sample(sampler_MainTex, mainUV1);
     mainTex = lerp(mainTex, _MainTex2.Sample(sampler_MainTex, mainUV2), _AmountTex2);
@@ -520,16 +554,16 @@ float4 frag_forward(v2f i) : SV_TARGET
     mainColor = lerp(mainColor, _MainColor10, _AmountTex10);
 
     // main tex decal
-    float2 DecalUV1 = FlipbookCalculation(mainUv, _DecalTexColumns1, _DecalTexRows1, _DecalTexSpeed1, _DecalTexFrameIND1, _DecalTexEndFrameIND1);
-    float2 DecalUV2 = FlipbookCalculation(mainUv, _DecalTexColumns2, _DecalTexRows2, _DecalTexSpeed2, _DecalTexFrameIND2, _DecalTexEndFrameIND2);
-    float2 DecalUV3 = FlipbookCalculation(mainUv, _DecalTexColumns3, _DecalTexRows3, _DecalTexSpeed3, _DecalTexFrameIND3, _DecalTexEndFrameIND3);
-    float2 DecalUV4 = FlipbookCalculation(mainUv, _DecalTexColumns4, _DecalTexRows4, _DecalTexSpeed4, _DecalTexFrameIND4, _DecalTexEndFrameIND4);
-    float2 DecalUV5 = FlipbookCalculation(mainUv, _DecalTexColumns5, _DecalTexRows5, _DecalTexSpeed5, _DecalTexFrameIND5, _DecalTexEndFrameIND5);
-    float2 DecalUV6 = FlipbookCalculation(mainUv, _DecalTexColumns6, _DecalTexRows6, _DecalTexSpeed6, _DecalTexFrameIND6, _DecalTexEndFrameIND6);
-    float2 DecalUV7 = FlipbookCalculation(mainUv, _DecalTexColumns7, _DecalTexRows7, _DecalTexSpeed7, _DecalTexFrameIND7, _DecalTexEndFrameIND7);
-    float2 DecalUV8 = FlipbookCalculation(mainUv, _DecalTexColumns8, _DecalTexRows8, _DecalTexSpeed8, _DecalTexFrameIND8, _DecalTexEndFrameIND8);
-    float2 DecalUV9 = FlipbookCalculation(mainUv, _DecalTexColumns9, _DecalTexRows9, _DecalTexSpeed9, _DecalTexFrameIND9, _DecalTexEndFrameIND9);
-    float2 DecalUV10 = FlipbookCalculation(mainUv, _DecalTexColumns10, _DecalTexRows10, _DecalTexSpeed10, _DecalTexFrameIND10, _DecalTexEndFrameIND10);
+    float2 DecalUV1 = FlipbookCalculation(mainUv, _DecalTexColumns1, _DecalTexRows1, _DecalTexSpeed1, _DecalTexFrameIND1, _DecalTexEndFrameIND1, _DecalTexWrapMode1);
+    float2 DecalUV2 = FlipbookCalculation(mainUv, _DecalTexColumns2, _DecalTexRows2, _DecalTexSpeed2, _DecalTexFrameIND2, _DecalTexEndFrameIND2, _DecalTexWrapMode2);
+    float2 DecalUV3 = FlipbookCalculation(mainUv, _DecalTexColumns3, _DecalTexRows3, _DecalTexSpeed3, _DecalTexFrameIND3, _DecalTexEndFrameIND3, _DecalTexWrapMode3);
+    float2 DecalUV4 = FlipbookCalculation(mainUv, _DecalTexColumns4, _DecalTexRows4, _DecalTexSpeed4, _DecalTexFrameIND4, _DecalTexEndFrameIND4, _DecalTexWrapMode4);
+    float2 DecalUV5 = FlipbookCalculation(mainUv, _DecalTexColumns5, _DecalTexRows5, _DecalTexSpeed5, _DecalTexFrameIND5, _DecalTexEndFrameIND5, _DecalTexWrapMode5);
+    float2 DecalUV6 = FlipbookCalculation(mainUv, _DecalTexColumns6, _DecalTexRows6, _DecalTexSpeed6, _DecalTexFrameIND6, _DecalTexEndFrameIND6, _DecalTexWrapMode6);
+    float2 DecalUV7 = FlipbookCalculation(mainUv, _DecalTexColumns7, _DecalTexRows7, _DecalTexSpeed7, _DecalTexFrameIND7, _DecalTexEndFrameIND7, _DecalTexWrapMode7);
+    float2 DecalUV8 = FlipbookCalculation(mainUv, _DecalTexColumns8, _DecalTexRows8, _DecalTexSpeed8, _DecalTexFrameIND8, _DecalTexEndFrameIND8, _DecalTexWrapMode8);
+    float2 DecalUV9 = FlipbookCalculation(mainUv, _DecalTexColumns9, _DecalTexRows9, _DecalTexSpeed9, _DecalTexFrameIND9, _DecalTexEndFrameIND9, _DecalTexWrapMode9);
+    float2 DecalUV10 = FlipbookCalculation(mainUv, _DecalTexColumns10, _DecalTexRows10, _DecalTexSpeed10, _DecalTexFrameIND10, _DecalTexEndFrameIND10, _DecalTexWrapMode10);
 
     half4 decalTex = _DecalTex1.Sample(sampler_DecalTex1, DecalUV1) * _AmountDecal1;
     decalTex = lerp(decalTex, _DecalTex2.Sample(sampler_DecalTex1, DecalUV2), _DecalTex2.Sample(sampler_DecalTex1, DecalUV2).a * _AmountDecal2);
@@ -697,16 +731,16 @@ float4 frag_forward(v2f i) : SV_TARGET
 #ifdef MTOON_FORWARD_ADD
 #else
     //half3 emission = tex2D(_EmissionMap, mainUv).rgb * _EmissionColor.rgb;
-    half3 emission = _EmissionMap1.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns1, _EmissionTexRows1, _EmissionTexSpeed1, _EmissionTexFrameIND1, _EmissionTexEndFrameIND1)).rgb * _EmissionColor1.rgb * _EmissionAmount1;
-    emission = lerp(emission, _EmissionMap2.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns2, _EmissionTexRows2, _EmissionTexSpeed2, _EmissionTexFrameIND2, _EmissionTexEndFrameIND2)) * _EmissionColor2.rgb, _EmissionAmount2);
-    emission = lerp(emission, _EmissionMap3.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns3, _EmissionTexRows3, _EmissionTexSpeed3, _EmissionTexFrameIND3, _EmissionTexEndFrameIND3)) * _EmissionColor3.rgb, _EmissionAmount3);
-    emission = lerp(emission, _EmissionMap4.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns4, _EmissionTexRows4, _EmissionTexSpeed4, _EmissionTexFrameIND4, _EmissionTexEndFrameIND4)) * _EmissionColor4.rgb, _EmissionAmount4);
-    emission = lerp(emission, _EmissionMap5.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns5, _EmissionTexRows5, _EmissionTexSpeed5, _EmissionTexFrameIND5, _EmissionTexEndFrameIND5)) * _EmissionColor5.rgb, _EmissionAmount5);
-    emission = lerp(emission, _EmissionMap6.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns6, _EmissionTexRows6, _EmissionTexSpeed6, _EmissionTexFrameIND6, _EmissionTexEndFrameIND6)) * _EmissionColor6.rgb, _EmissionAmount6);
-    emission = lerp(emission, _EmissionMap7.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns7, _EmissionTexRows7, _EmissionTexSpeed7, _EmissionTexFrameIND7, _EmissionTexEndFrameIND7)) * _EmissionColor7.rgb, _EmissionAmount7);
-    emission = lerp(emission, _EmissionMap8.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns8, _EmissionTexRows8, _EmissionTexSpeed8, _EmissionTexFrameIND8, _EmissionTexEndFrameIND8)) * _EmissionColor8.rgb, _EmissionAmount8);
-    emission = lerp(emission, _EmissionMap9.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns9, _EmissionTexRows9, _EmissionTexSpeed9, _EmissionTexFrameIND9, _EmissionTexEndFrameIND9)) * _EmissionColor9.rgb, _EmissionAmount9);
-    emission = lerp(emission, _EmissionMap10.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns10, _EmissionTexRows10, _EmissionTexSpeed10, _EmissionTexFrameIND10, _EmissionTexEndFrameIND10)) * _EmissionColor10.rgb, _EmissionAmount10);
+    half3 emission = _EmissionMap1.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns1, _EmissionTexRows1, _EmissionTexSpeed1, _EmissionTexFrameIND1, _EmissionTexEndFrameIND1, _EmissionTexWrapMode1)).rgb * _EmissionColor1.rgb * _EmissionAmount1;
+    emission = lerp(emission, _EmissionMap2.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns2, _EmissionTexRows2, _EmissionTexSpeed2, _EmissionTexFrameIND2, _EmissionTexEndFrameIND2, _EmissionTexWrapMode2)) * _EmissionColor2.rgb, _EmissionAmount2);
+    emission = lerp(emission, _EmissionMap3.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns3, _EmissionTexRows3, _EmissionTexSpeed3, _EmissionTexFrameIND3, _EmissionTexEndFrameIND3, _EmissionTexWrapMode3)) * _EmissionColor3.rgb, _EmissionAmount3);
+    emission = lerp(emission, _EmissionMap4.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns4, _EmissionTexRows4, _EmissionTexSpeed4, _EmissionTexFrameIND4, _EmissionTexEndFrameIND4, _EmissionTexWrapMode4)) * _EmissionColor4.rgb, _EmissionAmount4);
+    emission = lerp(emission, _EmissionMap5.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns5, _EmissionTexRows5, _EmissionTexSpeed5, _EmissionTexFrameIND5, _EmissionTexEndFrameIND5, _EmissionTexWrapMode5)) * _EmissionColor5.rgb, _EmissionAmount5);
+    emission = lerp(emission, _EmissionMap6.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns6, _EmissionTexRows6, _EmissionTexSpeed6, _EmissionTexFrameIND6, _EmissionTexEndFrameIND6, _EmissionTexWrapMode6)) * _EmissionColor6.rgb, _EmissionAmount6);
+    emission = lerp(emission, _EmissionMap7.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns7, _EmissionTexRows7, _EmissionTexSpeed7, _EmissionTexFrameIND7, _EmissionTexEndFrameIND7, _EmissionTexWrapMode7)) * _EmissionColor7.rgb, _EmissionAmount7);
+    emission = lerp(emission, _EmissionMap8.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns8, _EmissionTexRows8, _EmissionTexSpeed8, _EmissionTexFrameIND8, _EmissionTexEndFrameIND8, _EmissionTexWrapMode8)) * _EmissionColor8.rgb, _EmissionAmount8);
+    emission = lerp(emission, _EmissionMap9.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns9, _EmissionTexRows9, _EmissionTexSpeed9, _EmissionTexFrameIND9, _EmissionTexEndFrameIND9, _EmissionTexWrapMode9)) * _EmissionColor9.rgb, _EmissionAmount9);
+    emission = lerp(emission, _EmissionMap10.Sample(sampler_EmissionMap1, FlipbookCalculation(mainUv, _EmissionTexColumns10, _EmissionTexRows10, _EmissionTexSpeed10, _EmissionTexFrameIND10, _EmissionTexEndFrameIND10, _EmissionTexWrapMode10)) * _EmissionColor10.rgb, _EmissionAmount10);
     col += lerp(emission, half3(0, 0, 0), i.isOutline);
 #endif
 
