@@ -117,6 +117,73 @@ Shader "VRM/MToon_MultiTexture"
         _MainTexEndFrameIND9("End Frame", Float) = 0.0
         _MainTexEndFrameIND10("End Frame", Float) = 0.0
 
+        [HideInInspector] _MainTexUV1("Use UV Set", Float) = 0.0
+        [HideInInspector] _MainTexUV2("Use UV Set", Float) = 0.0
+        [HideInInspector] _MainTexUV3("Use UV Set", Float) = 0.0
+        [HideInInspector] _MainTexUV4("Use UV Set", Float) = 0.0
+        [HideInInspector] _MainTexUV5("Use UV Set", Float) = 0.0
+        [HideInInspector] _MainTexUV6("Use UV Set", Float) = 0.0
+        [HideInInspector] _MainTexUV7("Use UV Set", Float) = 0.0
+        [HideInInspector] _MainTexUV8("Use UV Set", Float) = 0.0
+        [HideInInspector] _MainTexUV9("Use UV Set", Float) = 0.0
+        [HideInInspector] _MainTexUV10("Use UV Set", Float) = 0.0
+
+        [HideInInspector] _DecalTexUV1("Use UV Set", Float) = 0.0
+        [HideInInspector] _DecalTexUV2("Use UV Set", Float) = 0.0
+        [HideInInspector] _DecalTexUV3("Use UV Set", Float) = 0.0
+        [HideInInspector] _DecalTexUV4("Use UV Set", Float) = 0.0
+        [HideInInspector] _DecalTexUV5("Use UV Set", Float) = 0.0
+        [HideInInspector] _DecalTexUV6("Use UV Set", Float) = 0.0
+        [HideInInspector] _DecalTexUV7("Use UV Set", Float) = 0.0
+        [HideInInspector] _DecalTexUV8("Use UV Set", Float) = 0.0
+        [HideInInspector] _DecalTexUV9("Use UV Set", Float) = 0.0
+        [HideInInspector] _DecalTexUV10("Use UV Set", Float) = 0.0
+
+        [HideInInspector] _EmissionTexUV1("Use UV Set", Float) = 0.0
+        [HideInInspector] _EmissionTexUV2("Use UV Set", Float) = 0.0
+        [HideInInspector] _EmissionTexUV3("Use UV Set", Float) = 0.0
+        [HideInInspector] _EmissionTexUV4("Use UV Set", Float) = 0.0
+        [HideInInspector] _EmissionTexUV5("Use UV Set", Float) = 0.0
+        [HideInInspector] _EmissionTexUV6("Use UV Set", Float) = 0.0
+        [HideInInspector] _EmissionTexUV7("Use UV Set", Float) = 0.0
+        [HideInInspector] _EmissionTexUV8("Use UV Set", Float) = 0.0
+        [HideInInspector] _EmissionTexUV9("Use UV Set", Float) = 0.0
+        [HideInInspector] _EmissionTexUV10("Use UV Set", Float) = 0.0
+
+        [HideInInspector] _MainTexIsBinary2("Is Binary", Float) = 0.0
+        [HideInInspector] _MainTexIsBinary3("Is Binary", Float) = 0.0
+        [HideInInspector] _MainTexIsBinary4("Is Binary", Float) = 0.0
+        [HideInInspector] _MainTexIsBinary5("Is Binary", Float) = 0.0
+        [HideInInspector] _MainTexIsBinary6("Is Binary", Float) = 0.0
+        [HideInInspector] _MainTexIsBinary7("Is Binary", Float) = 0.0
+        [HideInInspector] _MainTexIsBinary8("Is Binary", Float) = 0.0
+        [HideInInspector] _MainTexIsBinary9("Is Binary", Float) = 0.0
+        [HideInInspector] _MainTexIsBinary10("Is Binary", Float) = 0.0
+
+        [HideInInspector] _DecalTexIsBinary1("Is Binary", Float) = 0.0
+        [HideInInspector] _DecalTexIsBinary2("Is Binary", Float) = 0.0
+        [HideInInspector] _DecalTexIsBinary3("Is Binary", Float) = 0.0
+        [HideInInspector] _DecalTexIsBinary4("Is Binary", Float) = 0.0
+        [HideInInspector] _DecalTexIsBinary5("Is Binary", Float) = 0.0
+        [HideInInspector] _DecalTexIsBinary6("Is Binary", Float) = 0.0
+        [HideInInspector] _DecalTexIsBinary7("Is Binary", Float) = 0.0
+        [HideInInspector] _DecalTexIsBinary8("Is Binary", Float) = 0.0
+        [HideInInspector] _DecalTexIsBinary9("Is Binary", Float) = 0.0
+        [HideInInspector] _DecalTexIsBinary10("Is Binary", Float) = 0.0
+
+        [HideInInspector] _EmissionTexIsBinary1("Is Binary", Float) = 0.0
+        [HideInInspector] _EmissionTexIsBinary2("Is Binary", Float) = 0.0
+        [HideInInspector] _EmissionTexIsBinary3("Is Binary", Float) = 0.0
+        [HideInInspector] _EmissionTexIsBinary4("Is Binary", Float) = 0.0
+        [HideInInspector] _EmissionTexIsBinary5("Is Binary", Float) = 0.0
+        [HideInInspector] _EmissionTexIsBinary6("Is Binary", Float) = 0.0
+        [HideInInspector] _EmissionTexIsBinary7("Is Binary", Float) = 0.0
+        [HideInInspector] _EmissionTexIsBinary8("Is Binary", Float) = 0.0
+        [HideInInspector] _EmissionTexIsBinary9("Is Binary", Float) = 0.0
+        [HideInInspector] _EmissionTexIsBinary10("Is Binary", Float) = 0.0
+
+
+
         [HideInInspector] _MainTexWrapMode1("Main Texture Wrap Mode", Float) = 0.0
         [HideInInspector] _MainTexWrapMode2("Main Texture Wrap Mode", Float) = 0.0
         [HideInInspector] _MainTexWrapMode3("Main Texture Wrap Mode", Float) = 0.0
@@ -359,10 +426,12 @@ Shader "VRM/MToon_MultiTexture"
         [HideInInspector] _DstBlend("_DstBlend", Float) = 0.0
         [HideInInspector] _ZWrite("_ZWrite", Float) = 1.0
         [HideInInspector] _AlphaToMask("_AlphaToMask", Float) = 0.0
+        [HideInInspector] _Comparison("_Comparison", Float) = 6.0
+        [HideInInspector] _Pass("_Comparison", Float) = 0.0
     }
 
 
-        // for SM 3.0
+        // for SM 4.0
             SubShader
         {
             Tags { "RenderType" = "Opaque"  "Queue" = "Geometry+2" }
@@ -371,7 +440,8 @@ Shader "VRM/MToon_MultiTexture"
             ZTest Always
             Stencil {
                 Ref[_StencilID]
-                Comp notequal
+                Comp[_Comparison]
+                Pass[_Pass]
             }
 
             // Forward Base
@@ -473,7 +543,7 @@ Shader "VRM/MToon_MultiTexture"
                 ZTest LEqual
 
                 CGPROGRAM
-                #pragma target 3.0
+                #pragma target 4.0
                 #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON
                 #pragma multi_compile_shadowcaster
                 #pragma vertex vertShadowCaster

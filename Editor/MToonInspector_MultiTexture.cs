@@ -24,6 +24,95 @@ namespace MToon
         //        private MaterialProperty _outlineCullMode;
         private MaterialProperty _cutoff;
 
+        //Begin MainTex UV Set
+        private MaterialProperty _mainTexUV1;
+        private MaterialProperty _mainTexUV2;
+        private MaterialProperty _mainTexUV3;
+        private MaterialProperty _mainTexUV4;
+        private MaterialProperty _mainTexUV5;
+        private MaterialProperty _mainTexUV6;
+        private MaterialProperty _mainTexUV7;
+        private MaterialProperty _mainTexUV8;
+        private MaterialProperty _mainTexUV9;
+        private MaterialProperty _mainTexUV10;
+        //End MainTex UV Set
+
+        //Begin DecalTex UV Set
+        private MaterialProperty _decalTexUV1;
+        private MaterialProperty _decalTexUV2;
+        private MaterialProperty _decalTexUV3;
+        private MaterialProperty _decalTexUV4;
+        private MaterialProperty _decalTexUV5;
+        private MaterialProperty _decalTexUV6;
+        private MaterialProperty _decalTexUV7;
+        private MaterialProperty _decalTexUV8;
+        private MaterialProperty _decalTexUV9;
+        private MaterialProperty _decalTexUV10;
+        //End DecalTex UV Set
+
+        //Begin EmissionTex UV Set
+        private MaterialProperty _emissionTexUV1;
+        private MaterialProperty _emissionTexUV2;
+        private MaterialProperty _emissionTexUV3;
+        private MaterialProperty _emissionTexUV4;
+        private MaterialProperty _emissionTexUV5;
+        private MaterialProperty _emissionTexUV6;
+        private MaterialProperty _emissionTexUV7;
+        private MaterialProperty _emissionTexUV8;
+        private MaterialProperty _emissionTexUV9;
+        private MaterialProperty _emissionTexUV10;
+        //End EmissionTex UV Set
+
+        //Begin MainTex isBinary Toggle
+        private MaterialProperty _mainTexBinary2;
+        private MaterialProperty _mainTexBinary3;
+        private MaterialProperty _mainTexBinary4;
+        private MaterialProperty _mainTexBinary5;
+        private MaterialProperty _mainTexBinary6;
+        private MaterialProperty _mainTexBinary7;
+        private MaterialProperty _mainTexBinary8;
+        private MaterialProperty _mainTexBinary9;
+        private MaterialProperty _mainTexBinary10;
+        //End MainTex isBinary Toggle
+
+        //Begin DecalTex isBinary Toggle
+        private MaterialProperty _decalTexBinary1;
+        private MaterialProperty _decalTexBinary2;
+        private MaterialProperty _decalTexBinary3;
+        private MaterialProperty _decalTexBinary4;
+        private MaterialProperty _decalTexBinary5;
+        private MaterialProperty _decalTexBinary6;
+        private MaterialProperty _decalTexBinary7;
+        private MaterialProperty _decalTexBinary8;
+        private MaterialProperty _decalTexBinary9;
+        private MaterialProperty _decalTexBinary10;
+        //End DecalTex isBinary Toggle
+
+        //Begin EmissionTex isBinary Toggle
+        private MaterialProperty _emissionTexBinary1;
+        private MaterialProperty _emissionTexBinary2;
+        private MaterialProperty _emissionTexBinary3;
+        private MaterialProperty _emissionTexBinary4;
+        private MaterialProperty _emissionTexBinary5;
+        private MaterialProperty _emissionTexBinary6;
+        private MaterialProperty _emissionTexBinary7;
+        private MaterialProperty _emissionTexBinary8;
+        private MaterialProperty _emissionTexBinary9;
+        private MaterialProperty _emissionTexBinary10;
+
+        //Begin MainTex Color Foldout
+        private static bool ColorFoldout1 = false;
+        private static bool ColorFoldout2 = false;
+        private static bool ColorFoldout3 = false;
+        private static bool ColorFoldout4 = false;
+        private static bool ColorFoldout5 = false;
+        private static bool ColorFoldout6 = false;
+        private static bool ColorFoldout7 = false;
+        private static bool ColorFoldout8 = false;
+        private static bool ColorFoldout9 = false;
+        private static bool ColorFoldout10 = false;
+        //End MainTex Color Foldout
+
         //Begin MainTex Flipbook Settings
         private static bool ColorFlipbookFoldout1 = false;
         private static bool ColorFlipbookFoldout2 = false;
@@ -91,17 +180,6 @@ namespace MToon
         private MaterialProperty _mainTexEndFrameIND9;
         private MaterialProperty _mainTexEndFrameIND10;
 
-        private static EditorWrapMode MainTexWrapMode1;
-        private static EditorWrapMode MainTexWrapMode2;
-        private static EditorWrapMode MainTexWrapMode3;
-        private static EditorWrapMode MainTexWrapMode4;
-        private static EditorWrapMode MainTexWrapMode5;
-        private static EditorWrapMode MainTexWrapMode6;
-        private static EditorWrapMode MainTexWrapMode7;
-        private static EditorWrapMode MainTexWrapMode8;
-        private static EditorWrapMode MainTexWrapMode9;
-        private static EditorWrapMode MainTexWrapMode10;
-
         private MaterialProperty _mainTexWrapMode1;
         private MaterialProperty _mainTexWrapMode2;
         private MaterialProperty _mainTexWrapMode3;
@@ -113,9 +191,20 @@ namespace MToon
         private MaterialProperty _mainTexWrapMode9;
         private MaterialProperty _mainTexWrapMode10;
 
-        //private static EditorWrapMode _mainTexWrapMode1 = EditorWrapMode.Repeat;
-
         //End MainTex Flipbook Settings
+
+        //Begin Decal Foldout
+        private static bool DecalFoldout1 = false;
+        private static bool DecalFoldout2 = false;
+        private static bool DecalFoldout3 = false;
+        private static bool DecalFoldout4 = false;
+        private static bool DecalFoldout5 = false;
+        private static bool DecalFoldout6 = false;
+        private static bool DecalFoldout7 = false;
+        private static bool DecalFoldout8 = false;
+        private static bool DecalFoldout9 = false;
+        private static bool DecalFoldout10 = false;
+        //End Decal Foldout
 
         //Begin Decal Flipbook Settings
         private static bool DecalFlipBookFoldout1 = false;
@@ -184,17 +273,6 @@ namespace MToon
         private MaterialProperty _decalTexEndFrameIND9;
         private MaterialProperty _decalTexEndFrameIND10;
 
-        private static EditorWrapMode DecalTexWrapMode1;
-        private static EditorWrapMode DecalTexWrapMode2;
-        private static EditorWrapMode DecalTexWrapMode3;
-        private static EditorWrapMode DecalTexWrapMode4;
-        private static EditorWrapMode DecalTexWrapMode5;
-        private static EditorWrapMode DecalTexWrapMode6;
-        private static EditorWrapMode DecalTexWrapMode7;
-        private static EditorWrapMode DecalTexWrapMode8;
-        private static EditorWrapMode DecalTexWrapMode9;
-        private static EditorWrapMode DecalTexWrapMode10;
-
         private MaterialProperty _decalTexWrapMode1;
         private MaterialProperty _decalTexWrapMode2;
         private MaterialProperty _decalTexWrapMode3;
@@ -207,7 +285,20 @@ namespace MToon
         private MaterialProperty _decalTexWrapMode10;
         //End DecalTex Flipbook Settings
 
-        //Begin Decal Flipbook Settings
+        //Begin Emission Foldout
+        private static bool EmissionFoldout1 = false;
+        private static bool EmissionFoldout2 = false;
+        private static bool EmissionFoldout3 = false;
+        private static bool EmissionFoldout4 = false;
+        private static bool EmissionFoldout5 = false;
+        private static bool EmissionFoldout6 = false;
+        private static bool EmissionFoldout7 = false;
+        private static bool EmissionFoldout8 = false;
+        private static bool EmissionFoldout9 = false;
+        private static bool EmissionFoldout10 = false;
+        //End Emission Foldout
+
+        //Begin Emission Flipbook Settings
         private static bool EmissionFlipBookFoldout1 = false;
         private static bool EmissionFlipBookFoldout2 = false;
         private static bool EmissionFlipBookFoldout3 = false;
@@ -274,17 +365,6 @@ namespace MToon
         private MaterialProperty _emissionTexEndFrameIND9;
         private MaterialProperty _emissionTexEndFrameIND10;
 
-        private static EditorWrapMode EmissionTexWrapMode1;
-        private static EditorWrapMode EmissionTexWrapMode2;
-        private static EditorWrapMode EmissionTexWrapMode3;
-        private static EditorWrapMode EmissionTexWrapMode4;
-        private static EditorWrapMode EmissionTexWrapMode5;
-        private static EditorWrapMode EmissionTexWrapMode6;
-        private static EditorWrapMode EmissionTexWrapMode7;
-        private static EditorWrapMode EmissionTexWrapMode8;
-        private static EditorWrapMode EmissionTexWrapMode9;
-        private static EditorWrapMode EmissionTexWrapMode10;
-
         private MaterialProperty _emissionTexWrapMode1;
         private MaterialProperty _emissionTexWrapMode2;
         private MaterialProperty _emissionTexWrapMode3;
@@ -295,7 +375,7 @@ namespace MToon
         private MaterialProperty _emissionTexWrapMode8;
         private MaterialProperty _emissionTexWrapMode9;
         private MaterialProperty _emissionTexWrapMode10;
-        //End DecalTex Flipbook Settings
+        //End EmissionTex Flipbook Settings
 
         private MaterialProperty _mainColor2;
         private MaterialProperty _mainColor3;
@@ -312,6 +392,7 @@ namespace MToon
         private MaterialProperty _emissionMap;
         private MaterialProperty _lightColorAttenuation;
         private MaterialProperty _indirectLightIntensity;
+
         private MaterialProperty _mainTex;
         private MaterialProperty _mainTex2;
         private MaterialProperty _mainTex3;
@@ -449,6 +530,25 @@ namespace MToon
             Clamp = 2
 
         }
+
+        private enum IsBinaryToggle
+        {
+
+            Float = 0,
+            Binary = 2
+
+        }
+
+        private enum UVSetMode
+        {
+
+            UV1 = 0,
+            UV2 = 1,
+            UV3 = 2,
+            UV4 = 3
+
+        }
+
         public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] properties)
         {
             _version = FindProperty(Utils.PropVersion, properties);
@@ -460,6 +560,83 @@ namespace MToon
 //            _outlineCullMode = FindProperty(Utils.PropOutlineCullMode, properties);
             _cutoff = FindProperty(Utils.PropCutoff, properties);
             _StencilID = FindProperty("_StencilID", properties);
+
+            //Begin MainTex UV Set
+            _mainTexUV1 = FindProperty("_MainTexUV1", properties);
+            _mainTexUV2 = FindProperty("_MainTexUV2", properties);
+            _mainTexUV3 = FindProperty("_MainTexUV3", properties);
+            _mainTexUV4 = FindProperty("_MainTexUV4", properties);
+            _mainTexUV5 = FindProperty("_MainTexUV5", properties);
+            _mainTexUV6 = FindProperty("_MainTexUV6", properties);
+            _mainTexUV7 = FindProperty("_MainTexUV7", properties);
+            _mainTexUV8 = FindProperty("_MainTexUV8", properties);
+            _mainTexUV9 = FindProperty("_MainTexUV9", properties);
+            _mainTexUV10 = FindProperty("_MainTexUV10", properties);
+            //End MainTex UV Set
+
+            //Begin MainTex UV Set
+            _decalTexUV1 = FindProperty("_DecalTexUV1", properties);
+            _decalTexUV2 = FindProperty("_DecalTexUV2", properties);
+            _decalTexUV3 = FindProperty("_DecalTexUV3", properties);
+            _decalTexUV4 = FindProperty("_DecalTexUV4", properties);
+            _decalTexUV5 = FindProperty("_DecalTexUV5", properties);
+            _decalTexUV6 = FindProperty("_DecalTexUV6", properties);
+            _decalTexUV7 = FindProperty("_DecalTexUV7", properties);
+            _decalTexUV8 = FindProperty("_DecalTexUV8", properties);
+            _decalTexUV9 = FindProperty("_DecalTexUV9", properties);
+            _decalTexUV10 = FindProperty("_DecalTexUV10", properties);
+            //End DecalTex UV Set
+
+            //Begin EmissionTex UV Set
+            _emissionTexUV1 = FindProperty("_EmissionTexUV1", properties);
+            _emissionTexUV2 = FindProperty("_EmissionTexUV2", properties);
+            _emissionTexUV3 = FindProperty("_EmissionTexUV3", properties);
+            _emissionTexUV4 = FindProperty("_EmissionTexUV4", properties);
+            _emissionTexUV5 = FindProperty("_EmissionTexUV5", properties);
+            _emissionTexUV6 = FindProperty("_EmissionTexUV6", properties);
+            _emissionTexUV7 = FindProperty("_EmissionTexUV7", properties);
+            _emissionTexUV8 = FindProperty("_EmissionTexUV8", properties);
+            _emissionTexUV9 = FindProperty("_EmissionTexUV9", properties);
+            _emissionTexUV10 = FindProperty("_EmissionTexUV10", properties);
+            //End EmissionTex UV Set
+
+            //Begin MainTex isBinary
+            _mainTexBinary2 = FindProperty("_MainTexIsBinary2", properties);
+            _mainTexBinary3 = FindProperty("_MainTexIsBinary3", properties);
+            _mainTexBinary4 = FindProperty("_MainTexIsBinary4", properties);
+            _mainTexBinary5 = FindProperty("_MainTexIsBinary5", properties);
+            _mainTexBinary6 = FindProperty("_MainTexIsBinary6", properties);
+            _mainTexBinary7 = FindProperty("_MainTexIsBinary7", properties);
+            _mainTexBinary8 = FindProperty("_MainTexIsBinary8", properties);
+            _mainTexBinary9 = FindProperty("_MainTexIsBinary9", properties);
+            _mainTexBinary10 = FindProperty("_MainTexIsBinary10", properties);
+            //End MainTex isBinary
+
+            //Begin DecalTex isBinary
+            _decalTexBinary1 = FindProperty("_DecalTexIsBinary1", properties);
+            _decalTexBinary2 = FindProperty("_DecalTexIsBinary2", properties);
+            _decalTexBinary3 = FindProperty("_DecalTexIsBinary3", properties);
+            _decalTexBinary4 = FindProperty("_DecalTexIsBinary4", properties);
+            _decalTexBinary5 = FindProperty("_DecalTexIsBinary5", properties);
+            _decalTexBinary6 = FindProperty("_DecalTexIsBinary6", properties);
+            _decalTexBinary7 = FindProperty("_DecalTexIsBinary7", properties);
+            _decalTexBinary8 = FindProperty("_DecalTexIsBinary8", properties);
+            _decalTexBinary9 = FindProperty("_DecalTexIsBinary9", properties);
+            _decalTexBinary10 = FindProperty("_DecalTexIsBinary10", properties);
+            //End DecalTex isBinary
+
+            //Begin EmissionTex isBinary
+            _emissionTexBinary1 = FindProperty("_EmissionTexIsBinary1", properties);
+            _emissionTexBinary2 = FindProperty("_EmissionTexIsBinary2", properties);
+            _emissionTexBinary3 = FindProperty("_EmissionTexIsBinary3", properties);
+            _emissionTexBinary4 = FindProperty("_EmissionTexIsBinary4", properties);
+            _emissionTexBinary5 = FindProperty("_EmissionTexIsBinary5", properties);
+            _emissionTexBinary6 = FindProperty("_EmissionTexIsBinary6", properties);
+            _emissionTexBinary7 = FindProperty("_EmissionTexIsBinary7", properties);
+            _emissionTexBinary8 = FindProperty("_EmissionTexIsBinary8", properties);
+            _emissionTexBinary9 = FindProperty("_EmissionTexIsBinary9", properties);
+            _emissionTexBinary10 = FindProperty("_EmissionTexIsBinary10", properties);
+            //End EmissionTex isBinary
 
             //Begin MainTex Flipbook Settings
             _mainTexColumns1 = FindProperty("_MainTexColumns1", properties);
@@ -856,222 +1033,486 @@ namespace MToon
                 EditorGUILayout.Space();
 
 
+                EditorGUILayout.LabelField("Lit Color, Shade ,Alpha", EditorStyles.boldLabel);
                 EditorGUILayout.BeginVertical(GUI.skin.box);
                 {
-                    EditorGUILayout.LabelField("Lit Color, Alpha", EditorStyles.boldLabel);
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Texture 1", "Lit (RGB), Alpha (A)"),
-                            _mainTex, _color);
-
-                        EditorGUI.indentLevel++;
-                        ColorFlipbookFoldout1 = EditorGUILayout.Foldout(ColorFlipbookFoldout1, "Color & Shade Flipbook Settings 1", EditorStyles.boldFont);
-                        if (ColorFlipbookFoldout1)
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
                         {
 
-                            materialEditor.ShaderProperty(_mainTexColumns1, "Columns");
-                            materialEditor.ShaderProperty(_mainTexRows1, "Rows");
-                            materialEditor.ShaderProperty(_mainTexSpeed1, "Speed");
-                            materialEditor.ShaderProperty(_mainTexFrameIND1, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_mainTexEndFrameIND1, "End Frame");
+                            ColorFoldout1 = EditorGUILayout.Foldout(ColorFoldout1, "Color Channel 1", true);
+                            if (ColorFoldout1)
+                            {
+                                EditorGUILayout.LabelField("Color Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Texture", "Lit (RGB), Alpha (A)"),
+                                _mainTex, _color);
 
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode1, materialEditor);
+                                EditorGUILayout.Space();
 
-                            EditorGUILayout.Space();
+                                EditorGUILayout.LabelField("Shade Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture", "Shade (RGB)"), _shadeTexture,
+                                _shadeColor);
 
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                ColorFlipbookFoldout1 = EditorGUILayout.Foldout(ColorFlipbookFoldout1, "Flipbook Settings", EditorStyles.boldFont);
+                                if (ColorFlipbookFoldout1)
+                                {
+
+                                    materialEditor.ShaderProperty(_mainTexColumns1, "Columns");
+                                    materialEditor.ShaderProperty(_mainTexRows1, "Rows");
+                                    materialEditor.ShaderProperty(_mainTexSpeed1, "Speed");
+                                    materialEditor.ShaderProperty(_mainTexFrameIND1, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_mainTexEndFrameIND1, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode1, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _mainTexUV1, materialEditor);
+
+                            }
                         }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Texture 2", "Lit (RGB), Alpha (A)"),
-                            _mainTex2, _mainColor2, _amountTex2);
-
-                        EditorGUI.indentLevel++;
-                        ColorFlipbookFoldout2 = EditorGUILayout.Foldout(ColorFlipbookFoldout2, "Color & Shade Flipbook Settings 2", EditorStyles.boldFont);
-                        if (ColorFlipbookFoldout2)
-                        {
-
-                            materialEditor.ShaderProperty(_mainTexColumns2, "Columns");
-                            materialEditor.ShaderProperty(_mainTexRows2, "Rows");
-                            materialEditor.ShaderProperty(_mainTexSpeed2, "Speed");
-                            materialEditor.ShaderProperty(_mainTexFrameIND2, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_mainTexEndFrameIND2, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode2, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Texture 3", "Lit (RGB), Alpha (A)"),
-                            _mainTex3, _mainColor3, _amountTex3);
-
-                        EditorGUI.indentLevel++;
-                        ColorFlipbookFoldout3 = EditorGUILayout.Foldout(ColorFlipbookFoldout3, "Color & Shade Flipbook Settings 3", EditorStyles.boldFont);
-                        if (ColorFlipbookFoldout3)
-                        {
-
-                            materialEditor.ShaderProperty(_mainTexColumns3, "Columns");
-                            materialEditor.ShaderProperty(_mainTexRows3, "Rows");
-                            materialEditor.ShaderProperty(_mainTexSpeed3, "Speed");
-                            materialEditor.ShaderProperty(_mainTexFrameIND3, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_mainTexEndFrameIND3, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode3, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Texture 4", "Lit (RGB), Alpha (A)"),
-                            _mainTex4, _mainColor4, _amountTex4);
-
-                        EditorGUI.indentLevel++;
-                        ColorFlipbookFoldout4 = EditorGUILayout.Foldout(ColorFlipbookFoldout4, "Color & Shade Flipbook Settings 4", EditorStyles.boldFont);
-                        if (ColorFlipbookFoldout4)
-                        {
-
-                            materialEditor.ShaderProperty(_mainTexColumns4, "Columns");
-                            materialEditor.ShaderProperty(_mainTexRows4, "Rows");
-                            materialEditor.ShaderProperty(_mainTexSpeed4, "Speed");
-                            materialEditor.ShaderProperty(_mainTexFrameIND4, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_mainTexEndFrameIND4, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode4, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Texture 5", "Lit (RGB), Alpha (A)"),
-                            _mainTex5, _mainColor5, _amountTex5);
-
-                        EditorGUI.indentLevel++;
-                        ColorFlipbookFoldout5 = EditorGUILayout.Foldout(ColorFlipbookFoldout5, "Color & Shade Flipbook Settings 5", EditorStyles.boldFont);
-                        if (ColorFlipbookFoldout5)
-                        {
-
-                            materialEditor.ShaderProperty(_mainTexColumns5, "Columns");
-                            materialEditor.ShaderProperty(_mainTexRows5, "Rows");
-                            materialEditor.ShaderProperty(_mainTexSpeed5, "Speed");
-                            materialEditor.ShaderProperty(_mainTexFrameIND5, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_mainTexEndFrameIND5, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode5, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Texture 6", "Lit (RGB), Alpha (A)"),
-                            _mainTex6, _mainColor6, _amountTex6);
-
-                        EditorGUI.indentLevel++;
-                        ColorFlipbookFoldout6 = EditorGUILayout.Foldout(ColorFlipbookFoldout6, "Color & Shade Flipbook Settings 6", EditorStyles.boldFont);
-                        if (ColorFlipbookFoldout6)
-                        {
-
-                            materialEditor.ShaderProperty(_mainTexColumns6, "Columns");
-                            materialEditor.ShaderProperty(_mainTexRows6, "Rows");
-                            materialEditor.ShaderProperty(_mainTexSpeed6, "Speed");
-                            materialEditor.ShaderProperty(_mainTexFrameIND6, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_mainTexEndFrameIND6, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode6, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Texture 7", "Lit (RGB), Alpha (A)"),
-                            _mainTex7, _mainColor7, _amountTex7);
-
-                        EditorGUI.indentLevel++;
-                        ColorFlipbookFoldout7 = EditorGUILayout.Foldout(ColorFlipbookFoldout7, "Color & Shade Flipbook Settings 7", EditorStyles.boldFont);
-                        if (ColorFlipbookFoldout7)
-                        {
-
-                            materialEditor.ShaderProperty(_mainTexColumns7, "Columns");
-                            materialEditor.ShaderProperty(_mainTexRows7, "Rows");
-                            materialEditor.ShaderProperty(_mainTexSpeed7, "Speed");
-                            materialEditor.ShaderProperty(_mainTexFrameIND7, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_mainTexEndFrameIND7, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode7, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Texture 8", "Lit (RGB), Alpha (A)"),
-                            _mainTex8, _mainColor8, _amountTex8);
-
-                        EditorGUI.indentLevel++;
-                        ColorFlipbookFoldout8 = EditorGUILayout.Foldout(ColorFlipbookFoldout8, "Color & Shade Flipbook Settings 8", EditorStyles.boldFont);
-                        if (ColorFlipbookFoldout8)
-                        {
-
-                            materialEditor.ShaderProperty(_mainTexColumns8, "Columns");
-                            materialEditor.ShaderProperty(_mainTexRows8, "Rows");
-                            materialEditor.ShaderProperty(_mainTexSpeed8, "Speed");
-                            materialEditor.ShaderProperty(_mainTexFrameIND8, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_mainTexEndFrameIND8, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode8, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Texture 9", "Lit (RGB), Alpha (A)"),
-                            _mainTex9, _mainColor9, _amountTex9);
-
-                        EditorGUI.indentLevel++;
-                        ColorFlipbookFoldout9 = EditorGUILayout.Foldout(ColorFlipbookFoldout9, "Color & Shade Flipbook Settings 9", EditorStyles.boldFont);
-                        if (ColorFlipbookFoldout9)
-                        {
-
-                            materialEditor.ShaderProperty(_mainTexColumns9, "Columns");
-                            materialEditor.ShaderProperty(_mainTexRows9, "Rows");
-                            materialEditor.ShaderProperty(_mainTexSpeed9, "Speed");
-                            materialEditor.ShaderProperty(_mainTexFrameIND9, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_mainTexEndFrameIND9, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode9, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Texture 10", "Lit (RGB), Alpha (A)"),
-                            _mainTex10, _mainColor10, _amountTex10);
-
-                        EditorGUI.indentLevel++;
-                        ColorFlipbookFoldout10 = EditorGUILayout.Foldout(ColorFlipbookFoldout10, "Color & Shade Flipbook Settings 10", EditorStyles.boldFont);
-                        if (ColorFlipbookFoldout10)
-                        {
-
-                            materialEditor.ShaderProperty(_mainTexColumns10, "Columns");
-                            materialEditor.ShaderProperty(_mainTexRows10, "Rows");
-                            materialEditor.ShaderProperty(_mainTexSpeed10, "Speed");
-                            materialEditor.ShaderProperty(_mainTexFrameIND10, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_mainTexEndFrameIND10, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode10, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-
+                        EditorGUILayout.EndVertical();
                     }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            ColorFoldout2 = EditorGUILayout.Foldout(ColorFoldout2, "Color Channel 2", true);
+                            if (ColorFoldout2)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Texture", "Lit (RGB), Alpha (A)"),
+                                _mainTex2, _mainColor2, _amountTex2);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUILayout.LabelField("Shade Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture", "Shade (RGB)"),
+                                _shadeTex2, _shadeColor2);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _mainTexBinary2, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                ColorFlipbookFoldout2 = EditorGUILayout.Foldout(ColorFlipbookFoldout2, "Flipbook Settings", EditorStyles.boldFont);
+                                if (ColorFlipbookFoldout2)
+                                {
+
+                                    materialEditor.ShaderProperty(_mainTexColumns2, "Columns");
+                                    materialEditor.ShaderProperty(_mainTexRows2, "Rows");
+                                    materialEditor.ShaderProperty(_mainTexSpeed2, "Speed");
+                                    materialEditor.ShaderProperty(_mainTexFrameIND2, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_mainTexEndFrameIND2, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode2, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _mainTexUV2, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            ColorFoldout3 = EditorGUILayout.Foldout(ColorFoldout3, "Color Channel 3", true);
+                            if (ColorFoldout3)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Texture", "Lit (RGB), Alpha (A)"),
+                                _mainTex3, _mainColor3, _amountTex3);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUILayout.LabelField("Shade Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture", "Shade (RGB)"),
+                                _shadeTex3, _shadeColor3);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _mainTexBinary3, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                ColorFlipbookFoldout3 = EditorGUILayout.Foldout(ColorFlipbookFoldout3, "Flipbook Settings", EditorStyles.boldFont);
+                                if (ColorFlipbookFoldout3)
+                                {
+
+                                    materialEditor.ShaderProperty(_mainTexColumns3, "Columns");
+                                    materialEditor.ShaderProperty(_mainTexRows3, "Rows");
+                                    materialEditor.ShaderProperty(_mainTexSpeed3, "Speed");
+                                    materialEditor.ShaderProperty(_mainTexFrameIND3, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_mainTexEndFrameIND3, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode3, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _mainTexUV3, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            ColorFoldout4 = EditorGUILayout.Foldout(ColorFoldout4, "Color Channel 4", true);
+                            if (ColorFoldout4)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Texture", "Lit (RGB), Alpha (A)"),
+                                _mainTex4, _mainColor4, _amountTex4);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUILayout.LabelField("Shade Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture", "Shade (RGB)"),
+                                _shadeTex4, _shadeColor4);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _mainTexBinary4, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                ColorFlipbookFoldout4 = EditorGUILayout.Foldout(ColorFlipbookFoldout4, "Flipbook Settings", EditorStyles.boldFont);
+                                if (ColorFlipbookFoldout4)
+                                {
+
+                                    materialEditor.ShaderProperty(_mainTexColumns4, "Columns");
+                                    materialEditor.ShaderProperty(_mainTexRows4, "Rows");
+                                    materialEditor.ShaderProperty(_mainTexSpeed4, "Speed");
+                                    materialEditor.ShaderProperty(_mainTexFrameIND4, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_mainTexEndFrameIND4, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode4, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _mainTexUV4, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            ColorFoldout5 = EditorGUILayout.Foldout(ColorFoldout5, "Color Channel 5", true);
+                            if (ColorFoldout5)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Texture", "Lit (RGB), Alpha (A)"),
+                                _mainTex5, _mainColor5, _amountTex5);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUILayout.LabelField("Shade Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture", "Shade (RGB)"),
+                                _shadeTex5, _shadeColor5);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _mainTexBinary5, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                ColorFlipbookFoldout5 = EditorGUILayout.Foldout(ColorFlipbookFoldout5, "Flipbook Settings", EditorStyles.boldFont);
+                                if (ColorFlipbookFoldout5)
+                                {
+
+                                    materialEditor.ShaderProperty(_mainTexColumns5, "Columns");
+                                    materialEditor.ShaderProperty(_mainTexRows5, "Rows");
+                                    materialEditor.ShaderProperty(_mainTexSpeed5, "Speed");
+                                    materialEditor.ShaderProperty(_mainTexFrameIND5, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_mainTexEndFrameIND5, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode5, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _mainTexUV5, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            ColorFoldout6 = EditorGUILayout.Foldout(ColorFoldout6, "Color Channel 6", true);
+                            if (ColorFoldout6)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Texture", "Lit (RGB), Alpha (A)"),
+                                _mainTex6, _mainColor6, _amountTex6);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUILayout.LabelField("Shade Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture", "Shade (RGB)"),
+                                _shadeTex6, _shadeColor6);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _mainTexBinary6, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                ColorFlipbookFoldout6 = EditorGUILayout.Foldout(ColorFlipbookFoldout6, "Flipbook Settings", EditorStyles.boldFont);
+                                if (ColorFlipbookFoldout6)
+                                {
+
+                                    materialEditor.ShaderProperty(_mainTexColumns6, "Columns");
+                                    materialEditor.ShaderProperty(_mainTexRows6, "Rows");
+                                    materialEditor.ShaderProperty(_mainTexSpeed6, "Speed");
+                                    materialEditor.ShaderProperty(_mainTexFrameIND6, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_mainTexEndFrameIND6, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode6, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _mainTexUV6, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            ColorFoldout7 = EditorGUILayout.Foldout(ColorFoldout7, "Color Channel 7", true);
+                            if (ColorFoldout7)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Texture", "Lit (RGB), Alpha (A)"),
+                                _mainTex7, _mainColor7, _amountTex7);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUILayout.LabelField("Shade Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture", "Shade (RGB)"),
+                                _shadeTex7, _shadeColor7);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _mainTexBinary7, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                ColorFlipbookFoldout7 = EditorGUILayout.Foldout(ColorFlipbookFoldout7, "Flipbook Settings", EditorStyles.boldFont);
+                                if (ColorFlipbookFoldout7)
+                                {
+
+                                    materialEditor.ShaderProperty(_mainTexColumns7, "Columns");
+                                    materialEditor.ShaderProperty(_mainTexRows7, "Rows");
+                                    materialEditor.ShaderProperty(_mainTexSpeed7, "Speed");
+                                    materialEditor.ShaderProperty(_mainTexFrameIND7, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_mainTexEndFrameIND7, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode7, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _mainTexUV7, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            ColorFoldout8 = EditorGUILayout.Foldout(ColorFoldout8, "Color Channel 8", true);
+                            if (ColorFoldout8)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Texture", "Lit (RGB), Alpha (A)"),
+                                _mainTex8, _mainColor8, _amountTex8);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUILayout.LabelField("Shade Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture", "Shade (RGB)"),
+                                _shadeTex8, _shadeColor8);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _mainTexBinary8, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                ColorFlipbookFoldout8 = EditorGUILayout.Foldout(ColorFlipbookFoldout8, "Flipbook Settings", EditorStyles.boldFont);
+                                if (ColorFlipbookFoldout8)
+                                {
+
+                                    materialEditor.ShaderProperty(_mainTexColumns8, "Columns");
+                                    materialEditor.ShaderProperty(_mainTexRows8, "Rows");
+                                    materialEditor.ShaderProperty(_mainTexSpeed8, "Speed");
+                                    materialEditor.ShaderProperty(_mainTexFrameIND8, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_mainTexEndFrameIND8, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode8, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _mainTexUV8, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            ColorFoldout9 = EditorGUILayout.Foldout(ColorFoldout9, "Color Channel 9", true);
+                            if (ColorFoldout9)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Texture", "Lit (RGB), Alpha (A)"),
+                                _mainTex9, _mainColor9, _amountTex9);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUILayout.LabelField("Shade Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture", "Shade (RGB)"),
+                                _shadeTex9, _shadeColor9);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _mainTexBinary9, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                ColorFlipbookFoldout9 = EditorGUILayout.Foldout(ColorFlipbookFoldout9, "Flipbook Settings", EditorStyles.boldFont);
+                                if (ColorFlipbookFoldout9)
+                                {
+
+                                    materialEditor.ShaderProperty(_mainTexColumns9, "Columns");
+                                    materialEditor.ShaderProperty(_mainTexRows9, "Rows");
+                                    materialEditor.ShaderProperty(_mainTexSpeed9, "Speed");
+                                    materialEditor.ShaderProperty(_mainTexFrameIND9, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_mainTexEndFrameIND9, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode9, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _mainTexUV9, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            ColorFoldout10 = EditorGUILayout.Foldout(ColorFoldout10, "Color Channel 10", true);
+                            if (ColorFoldout10)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Texture", "Lit (RGB), Alpha (A)"),
+                                _mainTex10, _mainColor10, _amountTex10);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUILayout.LabelField("Shade Texture, Color", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture", "Shade (RGB)"),
+                                _shadeTex10, _shadeColor10);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _mainTexBinary10, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                ColorFlipbookFoldout10 = EditorGUILayout.Foldout(ColorFlipbookFoldout10, "Flipbook Settings", EditorStyles.boldFont);
+                                if (ColorFlipbookFoldout10)
+                                {
+
+                                    materialEditor.ShaderProperty(_mainTexColumns10, "Columns");
+                                    materialEditor.ShaderProperty(_mainTexRows10, "Rows");
+                                    materialEditor.ShaderProperty(_mainTexSpeed10, "Speed");
+                                    materialEditor.ShaderProperty(_mainTexFrameIND10, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_mainTexEndFrameIND10, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _mainTexWrapMode10, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _mainTexUV10, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
 
                     var bm = (RenderMode)_blendMode.floatValue;
                     if (bm == RenderMode.Cutout)
@@ -1086,253 +1527,446 @@ namespace MToon
                 EditorGUILayout.EndVertical();
                 EditorGUILayout.Space();
 
-
+                EditorGUILayout.LabelField("Decal", EditorStyles.boldLabel);
                 EditorGUILayout.BeginVertical(GUI.skin.box);
                 {
-                    EditorGUILayout.LabelField("Shade", EditorStyles.boldLabel);
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture 1", "Shade (RGB)"), _shadeTexture,
-                            _shadeColor);
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture 2", "Shade (RGB)"),
-                            _shadeTex2, _shadeColor2);
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture 3", "Shade (RGB)"),
-                            _shadeTex3, _shadeColor3);
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture 4", "Shade (RGB)"),
-                            _shadeTex4, _shadeColor4);
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture 5", "Shade (RGB)"),
-                            _shadeTex5, _shadeColor5);
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture 6", "Shade (RGB)"),
-                            _shadeTex6, _shadeColor6);
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture 7", "Shade (RGB)"),
-                            _shadeTex7, _shadeColor7);
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture 8", "Shade (RGB)"),
-                            _shadeTex8, _shadeColor8);
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture 9", "Shade (RGB)"),
-                            _shadeTex9, _shadeColor9);
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Shade Texture 10", "Shade (RGB)"),
-                            _shadeTex10, _shadeColor10);
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            DecalFoldout1 = EditorGUILayout.Foldout(DecalFoldout1, "Decal Channel 1", true);
+                            if (DecalFoldout1)
+                            {
+                                EditorGUILayout.LabelField("Texture, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 1", "Lit (RGB), Alpha (A)"),
+                                _decalTex1, _amountDecal1);
 
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _decalTexBinary1, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                DecalFlipBookFoldout1 = EditorGUILayout.Foldout(DecalFlipBookFoldout1, "Decal Flipbook Settings 1", EditorStyles.boldFont);
+                                if (DecalFlipBookFoldout1)
+                                {
+
+                                    materialEditor.ShaderProperty(_decalTexColumns1, "Columns");
+                                    materialEditor.ShaderProperty(_decalTexRows1, "Rows");
+                                    materialEditor.ShaderProperty(_decalTexSpeed1, "Speed");
+                                    materialEditor.ShaderProperty(_decalTexFrameIND1, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_decalTexEndFrameIND1, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode1, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _decalTexUV1, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                }
+                    EditorGUILayout.EndVertical();
 
-                EditorGUILayout.EndVertical();
-                EditorGUILayout.Space();
-
-                
-                EditorGUILayout.BeginVertical(GUI.skin.box);
-                {
-                    EditorGUILayout.LabelField("Decal", EditorStyles.boldLabel);
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 1", "Lit (RGB), Alpha (A)"),
-                            _decalTex1, _amountDecal1);
-
-                        EditorGUI.indentLevel++;
-                        DecalFlipBookFoldout1 = EditorGUILayout.Foldout(DecalFlipBookFoldout1, "Decal Flipbook Settings 1", EditorStyles.boldFont);
-                        if (DecalFlipBookFoldout1)
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
                         {
+                            DecalFoldout2 = EditorGUILayout.Foldout(DecalFoldout2, "Decal Channel 2", true);
+                            if (DecalFoldout2)
+                            {
+                                EditorGUILayout.LabelField("Texture, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 2", "Lit (RGB), Alpha (A)"),
+                                _decalTex2, _amountDecal2);
 
-                            materialEditor.ShaderProperty(_decalTexColumns1, "Columns");
-                            materialEditor.ShaderProperty(_decalTexRows1, "Rows");
-                            materialEditor.ShaderProperty(_decalTexSpeed1, "Speed");
-                            materialEditor.ShaderProperty(_decalTexFrameIND1, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_decalTexEndFrameIND1, "End Frame");
+                                EditorGUILayout.Space();
 
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode1, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _decalTexBinary2, materialEditor);
 
-                            EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                DecalFlipBookFoldout2 = EditorGUILayout.Foldout(DecalFlipBookFoldout2, "Decal Flipbook Settings 2", EditorStyles.boldFont);
+                                if (DecalFlipBookFoldout2)
+                                {
+
+                                    materialEditor.ShaderProperty(_decalTexColumns2, "Columns");
+                                    materialEditor.ShaderProperty(_decalTexRows2, "Rows");
+                                    materialEditor.ShaderProperty(_decalTexSpeed2, "Speed");
+                                    materialEditor.ShaderProperty(_decalTexFrameIND2, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_decalTexEndFrameIND2, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode2, materialEditor);
+
+                                    EditorGUILayout.Space();
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _decalTexUV2, materialEditor);
+                            }
                         }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 2", "Lit (RGB), Alpha (A)"),
-                            _decalTex2, _amountDecal2);
-
-                        EditorGUI.indentLevel++;
-                        DecalFlipBookFoldout2 = EditorGUILayout.Foldout(DecalFlipBookFoldout2, "Decal Flipbook Settings 2", EditorStyles.boldFont);
-                        if (DecalFlipBookFoldout2)
-                        {
-
-                            materialEditor.ShaderProperty(_decalTexColumns2, "Columns");
-                            materialEditor.ShaderProperty(_decalTexRows2, "Rows");
-                            materialEditor.ShaderProperty(_decalTexSpeed2, "Speed");
-                            materialEditor.ShaderProperty(_decalTexFrameIND2, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_decalTexEndFrameIND2, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode2, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 3", "Lit (RGB), Alpha (A)"),
-                            _decalTex3, _amountDecal3);
-
-                        EditorGUI.indentLevel++;
-                        DecalFlipBookFoldout3 = EditorGUILayout.Foldout(DecalFlipBookFoldout3, "Decal Flipbook Settings 3", EditorStyles.boldFont);
-                        if (DecalFlipBookFoldout3)
-                        {
-
-                            materialEditor.ShaderProperty(_decalTexColumns3, "Columns");
-                            materialEditor.ShaderProperty(_decalTexRows3, "Rows");
-                            materialEditor.ShaderProperty(_decalTexSpeed3, "Speed");
-                            materialEditor.ShaderProperty(_decalTexFrameIND3, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_decalTexEndFrameIND3, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode3, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 4", "Lit (RGB), Alpha (A)"),
-                            _decalTex4, _amountDecal4);
-
-                        EditorGUI.indentLevel++;
-                        DecalFlipBookFoldout4 = EditorGUILayout.Foldout(DecalFlipBookFoldout4, "Decal Flipbook Settings 4", EditorStyles.boldFont);
-                        if (DecalFlipBookFoldout4)
-                        {
-
-                            materialEditor.ShaderProperty(_decalTexColumns4, "Columns");
-                            materialEditor.ShaderProperty(_decalTexRows4, "Rows");
-                            materialEditor.ShaderProperty(_decalTexSpeed4, "Speed");
-                            materialEditor.ShaderProperty(_decalTexFrameIND4, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_decalTexEndFrameIND4, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode4, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 5", "Lit (RGB), Alpha (A)"),
-                            _decalTex5, _amountDecal5);
-
-                        EditorGUI.indentLevel++;
-                        DecalFlipBookFoldout5 = EditorGUILayout.Foldout(DecalFlipBookFoldout5, "Decal Flipbook Settings 5", EditorStyles.boldFont);
-                        if (DecalFlipBookFoldout5)
-                        {
-
-                            materialEditor.ShaderProperty(_decalTexColumns5, "Columns");
-                            materialEditor.ShaderProperty(_decalTexRows5, "Rows");
-                            materialEditor.ShaderProperty(_decalTexSpeed5, "Speed");
-                            materialEditor.ShaderProperty(_decalTexFrameIND5, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_decalTexEndFrameIND5, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode5, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 6", "Lit (RGB), Alpha (A)"),
-                            _decalTex6, _amountDecal6);
-
-                        EditorGUI.indentLevel++;
-                        DecalFlipBookFoldout6 = EditorGUILayout.Foldout(DecalFlipBookFoldout6, "Decal Flipbook Settings 6", EditorStyles.boldFont);
-                        if (DecalFlipBookFoldout6)
-                        {
-
-                            materialEditor.ShaderProperty(_decalTexColumns6, "Columns");
-                            materialEditor.ShaderProperty(_decalTexRows6, "Rows");
-                            materialEditor.ShaderProperty(_decalTexSpeed6, "Speed");
-                            materialEditor.ShaderProperty(_decalTexFrameIND6, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_decalTexEndFrameIND6, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode6, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 7", "Lit (RGB), Alpha (A)"),
-                            _decalTex7, _amountDecal7);
-
-                        EditorGUI.indentLevel++;
-                        DecalFlipBookFoldout7 = EditorGUILayout.Foldout(DecalFlipBookFoldout7, "Decal Flipbook Settings 7", EditorStyles.boldFont);
-                        if (DecalFlipBookFoldout7)
-                        {
-
-                            materialEditor.ShaderProperty(_decalTexColumns7, "Columns");
-                            materialEditor.ShaderProperty(_decalTexRows7, "Rows");
-                            materialEditor.ShaderProperty(_decalTexSpeed7, "Speed");
-                            materialEditor.ShaderProperty(_decalTexFrameIND7, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_decalTexEndFrameIND7, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode7, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 8", "Lit (RGB), Alpha (A)"),
-                            _decalTex8, _amountDecal8);
-
-                        EditorGUI.indentLevel++;
-                        DecalFlipBookFoldout8 = EditorGUILayout.Foldout(DecalFlipBookFoldout8, "Decal Flipbook Settings 8", EditorStyles.boldFont);
-                        if (DecalFlipBookFoldout8)
-                        {
-
-                            materialEditor.ShaderProperty(_decalTexColumns8, "Columns");
-                            materialEditor.ShaderProperty(_decalTexRows8, "Rows");
-                            materialEditor.ShaderProperty(_decalTexSpeed8, "Speed");
-                            materialEditor.ShaderProperty(_decalTexFrameIND8, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_decalTexEndFrameIND8, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode8, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 9", "Lit (RGB), Alpha (A)"),
-                            _decalTex9, _amountDecal9);
-
-                        EditorGUI.indentLevel++;
-                        DecalFlipBookFoldout9 = EditorGUILayout.Foldout(DecalFlipBookFoldout9, "Decal Flipbook Settings 9", EditorStyles.boldFont);
-                        if (DecalFlipBookFoldout9)
-                        {
-
-                            materialEditor.ShaderProperty(_decalTexColumns9, "Columns");
-                            materialEditor.ShaderProperty(_decalTexRows9, "Rows");
-                            materialEditor.ShaderProperty(_decalTexSpeed9, "Speed");
-                            materialEditor.ShaderProperty(_decalTexFrameIND9, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_decalTexEndFrameIND9, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode9, materialEditor);
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
-                        materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 10", "Lit (RGB), Alpha (A)"),
-                            _decalTex10, _amountDecal10);
-
-                        EditorGUI.indentLevel++;
-                        DecalFlipBookFoldout10 = EditorGUILayout.Foldout(DecalFlipBookFoldout10, "Decal Flipbook Settings 10", EditorStyles.boldFont);
-                        if (DecalFlipBookFoldout10)
-                        {
-
-                            materialEditor.ShaderProperty(_decalTexColumns10, "Columns");
-                            materialEditor.ShaderProperty(_decalTexRows10, "Rows");
-                            materialEditor.ShaderProperty(_decalTexSpeed10, "Speed");
-                            materialEditor.ShaderProperty(_decalTexFrameIND10, "Start/Selected Frame");
-                            materialEditor.ShaderProperty(_decalTexEndFrameIND10, "End Frame");
-
-                            PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode10, materialEditor);
-
-                            EditorGUILayout.Space();
-
-                        }
-                        EditorGUI.indentLevel--;
-
+                        EditorGUILayout.EndVertical();
                     }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            DecalFoldout3 = EditorGUILayout.Foldout(DecalFoldout3, "Decal Channel 3", true);
+                            if (DecalFoldout3)
+                            {
+                                EditorGUILayout.LabelField("Texture, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 3", "Lit (RGB), Alpha (A)"),
+                                _decalTex3, _amountDecal3);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _decalTexBinary3, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                DecalFlipBookFoldout3 = EditorGUILayout.Foldout(DecalFlipBookFoldout3, "Decal Flipbook Settings 3", EditorStyles.boldFont);
+                                if (DecalFlipBookFoldout3)
+                                {
+
+                                    materialEditor.ShaderProperty(_decalTexColumns3, "Columns");
+                                    materialEditor.ShaderProperty(_decalTexRows3, "Rows");
+                                    materialEditor.ShaderProperty(_decalTexSpeed3, "Speed");
+                                    materialEditor.ShaderProperty(_decalTexFrameIND3, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_decalTexEndFrameIND3, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode3, materialEditor);
+
+                                    EditorGUILayout.Space();
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _decalTexUV3, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            DecalFoldout4 = EditorGUILayout.Foldout(DecalFoldout4, "Decal Channel 4", true);
+                            if (DecalFoldout4)
+                            {
+                                EditorGUILayout.LabelField("Texture, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 4", "Lit (RGB), Alpha (A)"),
+                                _decalTex4, _amountDecal4);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _decalTexBinary4, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                DecalFlipBookFoldout4 = EditorGUILayout.Foldout(DecalFlipBookFoldout4, "Decal Flipbook Settings 4", EditorStyles.boldFont);
+                                if (DecalFlipBookFoldout4)
+                                {
+
+                                    materialEditor.ShaderProperty(_decalTexColumns4, "Columns");
+                                    materialEditor.ShaderProperty(_decalTexRows4, "Rows");
+                                    materialEditor.ShaderProperty(_decalTexSpeed4, "Speed");
+                                    materialEditor.ShaderProperty(_decalTexFrameIND4, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_decalTexEndFrameIND4, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode4, materialEditor);
+
+                                    EditorGUILayout.Space();
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _decalTexUV4, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            DecalFoldout5 = EditorGUILayout.Foldout(DecalFoldout5, "Decal Channel 5", true);
+                            if (DecalFoldout5)
+                            {
+                                EditorGUILayout.LabelField("Texture, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 5", "Lit (RGB), Alpha (A)"),
+                                _decalTex5, _amountDecal5);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _decalTexBinary5, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                DecalFlipBookFoldout5 = EditorGUILayout.Foldout(DecalFlipBookFoldout5, "Decal Flipbook Settings 5", EditorStyles.boldFont);
+                                if (DecalFlipBookFoldout5)
+                                {
+
+                                    materialEditor.ShaderProperty(_decalTexColumns5, "Columns");
+                                    materialEditor.ShaderProperty(_decalTexRows5, "Rows");
+                                    materialEditor.ShaderProperty(_decalTexSpeed5, "Speed");
+                                    materialEditor.ShaderProperty(_decalTexFrameIND5, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_decalTexEndFrameIND5, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode5, materialEditor);
+
+                                    EditorGUILayout.Space();
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _decalTexUV5, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            DecalFoldout6 = EditorGUILayout.Foldout(DecalFoldout6, "Decal Channel 6", true);
+                            if (DecalFoldout6)
+                            {
+                                EditorGUILayout.LabelField("Texture, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 6", "Lit (RGB), Alpha (A)"),
+                                _decalTex6, _amountDecal6);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _decalTexBinary6, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                DecalFlipBookFoldout6 = EditorGUILayout.Foldout(DecalFlipBookFoldout6, "Decal Flipbook Settings 6", EditorStyles.boldFont);
+                                if (DecalFlipBookFoldout6)
+                                {
+
+                                    materialEditor.ShaderProperty(_decalTexColumns6, "Columns");
+                                    materialEditor.ShaderProperty(_decalTexRows6, "Rows");
+                                    materialEditor.ShaderProperty(_decalTexSpeed6, "Speed");
+                                    materialEditor.ShaderProperty(_decalTexFrameIND6, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_decalTexEndFrameIND6, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode6, materialEditor);
+
+                                    EditorGUILayout.Space();
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _decalTexUV6, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            DecalFoldout7 = EditorGUILayout.Foldout(DecalFoldout7, "Decal Channel 7", true);
+                            if (DecalFoldout7)
+                            {
+                                EditorGUILayout.LabelField("Texture, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 7", "Lit (RGB), Alpha (A)"),
+                                _decalTex7, _amountDecal7);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _decalTexBinary7, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                DecalFlipBookFoldout7 = EditorGUILayout.Foldout(DecalFlipBookFoldout7, "Decal Flipbook Settings 7", EditorStyles.boldFont);
+                                if (DecalFlipBookFoldout7)
+                                {
+
+                                    materialEditor.ShaderProperty(_decalTexColumns7, "Columns");
+                                    materialEditor.ShaderProperty(_decalTexRows7, "Rows");
+                                    materialEditor.ShaderProperty(_decalTexSpeed7, "Speed");
+                                    materialEditor.ShaderProperty(_decalTexFrameIND7, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_decalTexEndFrameIND7, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode7, materialEditor);
+
+                                    EditorGUILayout.Space();
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _decalTexUV7, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            DecalFoldout8 = EditorGUILayout.Foldout(DecalFoldout8, "Decal Channel 8", true);
+                            if (DecalFoldout8)
+                            {
+                                EditorGUILayout.LabelField("Texture, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 8", "Lit (RGB), Alpha (A)"),
+                                _decalTex8, _amountDecal8);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _decalTexBinary8, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                DecalFlipBookFoldout8 = EditorGUILayout.Foldout(DecalFlipBookFoldout8, "Decal Flipbook Settings 8", EditorStyles.boldFont);
+                                if (DecalFlipBookFoldout8)
+                                {
+
+                                    materialEditor.ShaderProperty(_decalTexColumns8, "Columns");
+                                    materialEditor.ShaderProperty(_decalTexRows8, "Rows");
+                                    materialEditor.ShaderProperty(_decalTexSpeed8, "Speed");
+                                    materialEditor.ShaderProperty(_decalTexFrameIND8, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_decalTexEndFrameIND8, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode8, materialEditor);
+
+                                    EditorGUILayout.Space();
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _decalTexUV8, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            DecalFoldout9 = EditorGUILayout.Foldout(DecalFoldout9, "Decal Channel 9", true);
+                            if (DecalFoldout9)
+                            {
+                                EditorGUILayout.LabelField("Texture, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 9", "Lit (RGB), Alpha (A)"),
+                                _decalTex9, _amountDecal9);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _decalTexBinary9, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                DecalFlipBookFoldout9 = EditorGUILayout.Foldout(DecalFlipBookFoldout9, "Decal Flipbook Settings 9", EditorStyles.boldFont);
+                                if (DecalFlipBookFoldout9)
+                                {
+
+                                    materialEditor.ShaderProperty(_decalTexColumns9, "Columns");
+                                    materialEditor.ShaderProperty(_decalTexRows9, "Rows");
+                                    materialEditor.ShaderProperty(_decalTexSpeed9, "Speed");
+                                    materialEditor.ShaderProperty(_decalTexFrameIND9, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_decalTexEndFrameIND9, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode9, materialEditor);
+                                    EditorGUILayout.Space();
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _decalTexUV9, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
+
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
+                    {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            DecalFoldout10 = EditorGUILayout.Foldout(DecalFoldout10, "Decal Channel 10", true);
+                            if (DecalFoldout10)
+                            {
+                                EditorGUILayout.LabelField("Texture, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Decal Texture 10", "Lit (RGB), Alpha (A)"),
+                                _decalTex10, _amountDecal10);
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _decalTexBinary10, materialEditor);
+
+                                EditorGUILayout.Space();
+
+                                EditorGUI.indentLevel++;
+                                DecalFlipBookFoldout10 = EditorGUILayout.Foldout(DecalFlipBookFoldout10, "Decal Flipbook Settings 10", EditorStyles.boldFont);
+                                if (DecalFlipBookFoldout10)
+                                {
+
+                                    materialEditor.ShaderProperty(_decalTexColumns10, "Columns");
+                                    materialEditor.ShaderProperty(_decalTexRows10, "Rows");
+                                    materialEditor.ShaderProperty(_decalTexSpeed10, "Speed");
+                                    materialEditor.ShaderProperty(_decalTexFrameIND10, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_decalTexEndFrameIND10, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _decalTexWrapMode10, materialEditor);
+
+                                    EditorGUILayout.Space();
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _decalTexUV10, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
+                    }
+                    EditorGUILayout.EndVertical();
                 }
 
                 EditorGUILayout.EndVertical();
@@ -1403,223 +2037,432 @@ namespace MToon
                 }
                 EditorGUILayout.EndVertical();
                 EditorGUILayout.Space();
-                
+
+
                 EditorGUILayout.LabelField("Emission", EditorStyles.boldLabel);
                 EditorGUILayout.BeginVertical(GUI.skin.box);
                 {
-                    /*TextureWithHdrColor(materialEditor, "Emission1", "Emission (RGB)",
-                        _emissionMap, _emissionColor);*/
-
-                    materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map 1", "Lit (RGB), Alpha (A)"),
-                            _emissionMap1, _emissionColor1, _emissionAmount1);
-
-                    EditorGUI.indentLevel++;
-                    EmissionFlipBookFoldout1 = EditorGUILayout.Foldout(EmissionFlipBookFoldout1, "Emission Flipbook Settings 2", EditorStyles.boldFont);
-                    if (EmissionFlipBookFoldout1)
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            EmissionFoldout1 = EditorGUILayout.Foldout(EmissionFoldout1, "Emission Channel 1", true);
+                            if (EmissionFoldout1)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map", "Lit (RGB), Alpha (A)"),
+                                _emissionMap1, _emissionColor1, _emissionAmount1);
 
-                        materialEditor.ShaderProperty(_emissionTexColumns1, "Columns");
-                        materialEditor.ShaderProperty(_emissionTexRows1, "Rows");
-                        materialEditor.ShaderProperty(_emissionTexSpeed1, "Speed");
-                        materialEditor.ShaderProperty(_emissionTexFrameIND1, "Start/Selected Frame");
-                        materialEditor.ShaderProperty(_emissionTexEndFrameIND1, "End Frame");
+                                EditorGUILayout.Space();
 
-                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode1, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _emissionTexBinary1, materialEditor);
 
-                        EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                EmissionFlipBookFoldout1 = EditorGUILayout.Foldout(EmissionFlipBookFoldout1, "Flipbook Settings", EditorStyles.boldFont);
+                                if (EmissionFlipBookFoldout1)
+                                {
+
+                                    materialEditor.ShaderProperty(_emissionTexColumns1, "Columns");
+                                    materialEditor.ShaderProperty(_emissionTexRows1, "Rows");
+                                    materialEditor.ShaderProperty(_emissionTexSpeed1, "Speed");
+                                    materialEditor.ShaderProperty(_emissionTexFrameIND1, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_emissionTexEndFrameIND1, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode1, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _emissionTexUV1, materialEditor);
+                            }
+
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUI.indentLevel--;
+                    EditorGUILayout.EndVertical();
 
-                    materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map 2", "Lit (RGB), Alpha (A)"),
-                            _emissionMap2, _emissionColor2, _emissionAmount2);
-
-                    EditorGUI.indentLevel++;
-                    EmissionFlipBookFoldout2 = EditorGUILayout.Foldout(EmissionFlipBookFoldout2, "Emission Flipbook Settings 2", EditorStyles.boldFont);
-                    if (EmissionFlipBookFoldout2)
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            EmissionFoldout2 = EditorGUILayout.Foldout(EmissionFoldout2, "Emission Channel 2", true);
+                            if (EmissionFoldout2)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map", "Lit (RGB), Alpha (A)"),
+                                _emissionMap2, _emissionColor2, _emissionAmount2);
 
-                        materialEditor.ShaderProperty(_emissionTexColumns2, "Columns");
-                        materialEditor.ShaderProperty(_emissionTexRows2, "Rows");
-                        materialEditor.ShaderProperty(_emissionTexSpeed2, "Speed");
-                        materialEditor.ShaderProperty(_emissionTexFrameIND2, "Start/Selected Frame");
-                        materialEditor.ShaderProperty(_emissionTexEndFrameIND2, "End Frame");
+                                EditorGUILayout.Space();
 
-                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode2, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _emissionTexBinary2, materialEditor);
 
-                        EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                EmissionFlipBookFoldout2 = EditorGUILayout.Foldout(EmissionFlipBookFoldout2, "Flipbook Settings", EditorStyles.boldFont);
+                                if (EmissionFlipBookFoldout2)
+                                {
+
+                                    materialEditor.ShaderProperty(_emissionTexColumns2, "Columns");
+                                    materialEditor.ShaderProperty(_emissionTexRows2, "Rows");
+                                    materialEditor.ShaderProperty(_emissionTexSpeed2, "Speed");
+                                    materialEditor.ShaderProperty(_emissionTexFrameIND2, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_emissionTexEndFrameIND2, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode2, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _emissionTexUV2, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUI.indentLevel--;
+                    EditorGUILayout.EndVertical();
 
-                    materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map 3", "Lit (RGB), Alpha (A)"),
-                            _emissionMap3, _emissionColor3, _emissionAmount3);
-
-                    EditorGUI.indentLevel++;
-                    EmissionFlipBookFoldout3 = EditorGUILayout.Foldout(EmissionFlipBookFoldout3, "Emission Flipbook Settings 3", EditorStyles.boldFont);
-                    if (EmissionFlipBookFoldout3)
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            EmissionFoldout3 = EditorGUILayout.Foldout(EmissionFoldout3, "Emission Channel 3", true);
+                            if (EmissionFoldout3)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map", "Lit (RGB), Alpha (A)"),
+                                _emissionMap3, _emissionColor3, _emissionAmount3);
 
-                        materialEditor.ShaderProperty(_emissionTexColumns3, "Columns");
-                        materialEditor.ShaderProperty(_emissionTexRows3, "Rows");
-                        materialEditor.ShaderProperty(_emissionTexSpeed3, "Speed");
-                        materialEditor.ShaderProperty(_emissionTexFrameIND3, "Start/Selected Frame");
-                        materialEditor.ShaderProperty(_emissionTexEndFrameIND3, "End Frame");
+                                EditorGUILayout.Space();
 
-                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode3, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _emissionTexBinary3, materialEditor);
 
-                        EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                EmissionFlipBookFoldout3 = EditorGUILayout.Foldout(EmissionFlipBookFoldout3, "Flipbook Settings", EditorStyles.boldFont);
+                                if (EmissionFlipBookFoldout3)
+                                {
+
+                                    materialEditor.ShaderProperty(_emissionTexColumns3, "Columns");
+                                    materialEditor.ShaderProperty(_emissionTexRows3, "Rows");
+                                    materialEditor.ShaderProperty(_emissionTexSpeed3, "Speed");
+                                    materialEditor.ShaderProperty(_emissionTexFrameIND3, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_emissionTexEndFrameIND3, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode3, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _emissionTexUV3, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUI.indentLevel--;
+                    EditorGUILayout.EndVertical();
 
-                    materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map 4", "Lit (RGB), Alpha (A)"),
-                            _emissionMap4, _emissionColor4, _emissionAmount4);
-
-                    EditorGUI.indentLevel++;
-                    EmissionFlipBookFoldout4 = EditorGUILayout.Foldout(EmissionFlipBookFoldout4, "Emission Flipbook Settings 4", EditorStyles.boldFont);
-                    if (EmissionFlipBookFoldout4)
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            EmissionFoldout4 = EditorGUILayout.Foldout(EmissionFoldout4, "Emission Channel 4", true);
+                            if (EmissionFoldout4)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map", "Lit (RGB), Alpha (A)"),
+                                _emissionMap4, _emissionColor4, _emissionAmount4);
 
-                        materialEditor.ShaderProperty(_emissionTexColumns4, "Columns");
-                        materialEditor.ShaderProperty(_emissionTexRows4, "Rows");
-                        materialEditor.ShaderProperty(_emissionTexSpeed4, "Speed");
-                        materialEditor.ShaderProperty(_emissionTexFrameIND4, "Start/Selected Frame");
-                        materialEditor.ShaderProperty(_emissionTexEndFrameIND4, "End Frame");
+                                EditorGUILayout.Space();
 
-                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode4, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _emissionTexBinary4, materialEditor);
 
-                        EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                EmissionFlipBookFoldout4 = EditorGUILayout.Foldout(EmissionFlipBookFoldout4, "Flipbook Settings", EditorStyles.boldFont);
+                                if (EmissionFlipBookFoldout4)
+                                {
+
+                                    materialEditor.ShaderProperty(_emissionTexColumns4, "Columns");
+                                    materialEditor.ShaderProperty(_emissionTexRows4, "Rows");
+                                    materialEditor.ShaderProperty(_emissionTexSpeed4, "Speed");
+                                    materialEditor.ShaderProperty(_emissionTexFrameIND4, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_emissionTexEndFrameIND4, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode4, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _emissionTexUV4, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUI.indentLevel--;
+                    EditorGUILayout.EndVertical();
 
-                    materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map 5", "Lit (RGB), Alpha (A)"),
-                            _emissionMap5, _emissionColor5, _emissionAmount5);
-
-                    EditorGUI.indentLevel++;
-                    EmissionFlipBookFoldout5 = EditorGUILayout.Foldout(EmissionFlipBookFoldout5, "Emission Flipbook Settings 5", EditorStyles.boldFont);
-                    if (EmissionFlipBookFoldout5)
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            EmissionFoldout5 = EditorGUILayout.Foldout(EmissionFoldout5, "Emission Channel 5", true);
+                            if (EmissionFoldout5)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map", "Lit (RGB), Alpha (A)"),
+                                _emissionMap5, _emissionColor5, _emissionAmount5);
 
-                        materialEditor.ShaderProperty(_emissionTexColumns5, "Columns");
-                        materialEditor.ShaderProperty(_emissionTexRows5, "Rows");
-                        materialEditor.ShaderProperty(_emissionTexSpeed5, "Speed");
-                        materialEditor.ShaderProperty(_emissionTexFrameIND5, "Start/Selected Frame");
-                        materialEditor.ShaderProperty(_emissionTexEndFrameIND5, "End Frame");
+                                EditorGUILayout.Space();
 
-                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode5, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _emissionTexBinary5, materialEditor);
 
-                        EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                EmissionFlipBookFoldout5 = EditorGUILayout.Foldout(EmissionFlipBookFoldout5, "Flipbook Settings", EditorStyles.boldFont);
+                                if (EmissionFlipBookFoldout5)
+                                {
+
+                                    materialEditor.ShaderProperty(_emissionTexColumns5, "Columns");
+                                    materialEditor.ShaderProperty(_emissionTexRows5, "Rows");
+                                    materialEditor.ShaderProperty(_emissionTexSpeed5, "Speed");
+                                    materialEditor.ShaderProperty(_emissionTexFrameIND5, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_emissionTexEndFrameIND5, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode5, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _emissionTexUV5, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUI.indentLevel--;
+                    EditorGUILayout.EndVertical();
 
-                    materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map 6", "Lit (RGB), Alpha (A)"),
-                            _emissionMap6, _emissionColor6, _emissionAmount6);
-
-                    EditorGUI.indentLevel++;
-                    EmissionFlipBookFoldout6 = EditorGUILayout.Foldout(EmissionFlipBookFoldout6, "Emission Flipbook Settings 6", EditorStyles.boldFont);
-                    if (EmissionFlipBookFoldout6)
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            EmissionFoldout6 = EditorGUILayout.Foldout(EmissionFoldout6, "Emission Channel 6", true);
+                            if (EmissionFoldout6)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map", "Lit (RGB), Alpha (A)"),
+                                _emissionMap6, _emissionColor6, _emissionAmount6);
 
-                        materialEditor.ShaderProperty(_emissionTexColumns6, "Columns");
-                        materialEditor.ShaderProperty(_emissionTexRows6, "Rows");
-                        materialEditor.ShaderProperty(_emissionTexSpeed6, "Speed");
-                        materialEditor.ShaderProperty(_emissionTexFrameIND6, "Start/Selected Frame");
-                        materialEditor.ShaderProperty(_emissionTexEndFrameIND6, "End Frame");
+                                EditorGUILayout.Space();
 
-                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode6, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _emissionTexBinary6, materialEditor);
 
-                        EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                EmissionFlipBookFoldout6 = EditorGUILayout.Foldout(EmissionFlipBookFoldout6, "Flipbook Settings", EditorStyles.boldFont);
+                                if (EmissionFlipBookFoldout6)
+                                {
+
+                                    materialEditor.ShaderProperty(_emissionTexColumns6, "Columns");
+                                    materialEditor.ShaderProperty(_emissionTexRows6, "Rows");
+                                    materialEditor.ShaderProperty(_emissionTexSpeed6, "Speed");
+                                    materialEditor.ShaderProperty(_emissionTexFrameIND6, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_emissionTexEndFrameIND6, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode6, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _emissionTexUV6, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUI.indentLevel--;
+                    EditorGUILayout.EndVertical();
 
-                    materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map 7", "Lit (RGB), Alpha (A)"),
-                            _emissionMap7, _emissionColor7, _emissionAmount7);
-
-                    EditorGUI.indentLevel++;
-                    EmissionFlipBookFoldout7 = EditorGUILayout.Foldout(EmissionFlipBookFoldout7, "Emission Flipbook Settings 7", EditorStyles.boldFont);
-                    if (EmissionFlipBookFoldout7)
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            EmissionFoldout7 = EditorGUILayout.Foldout(EmissionFoldout7, "Emission Channel 7", true);
+                            if (EmissionFoldout7)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map", "Lit (RGB), Alpha (A)"),
+                                _emissionMap7, _emissionColor7, _emissionAmount7);
 
-                        materialEditor.ShaderProperty(_emissionTexColumns7, "Columns");
-                        materialEditor.ShaderProperty(_emissionTexRows7, "Rows");
-                        materialEditor.ShaderProperty(_emissionTexSpeed7, "Speed");
-                        materialEditor.ShaderProperty(_emissionTexFrameIND7, "Start/Selected Frame");
-                        materialEditor.ShaderProperty(_emissionTexEndFrameIND7, "End Frame");
+                                EditorGUILayout.Space();
 
-                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode7, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _emissionTexBinary7, materialEditor);
 
-                        EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                EmissionFlipBookFoldout7 = EditorGUILayout.Foldout(EmissionFlipBookFoldout7, "Flipbook Settings", EditorStyles.boldFont);
+                                if (EmissionFlipBookFoldout7)
+                                {
+
+                                    materialEditor.ShaderProperty(_emissionTexColumns7, "Columns");
+                                    materialEditor.ShaderProperty(_emissionTexRows7, "Rows");
+                                    materialEditor.ShaderProperty(_emissionTexSpeed7, "Speed");
+                                    materialEditor.ShaderProperty(_emissionTexFrameIND7, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_emissionTexEndFrameIND7, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode7, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _emissionTexUV7, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUI.indentLevel--;
+                    EditorGUILayout.EndVertical();
 
-                    materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map 8", "Lit (RGB), Alpha (A)"),
-                            _emissionMap8, _emissionColor8, _emissionAmount8);
-
-                    EditorGUI.indentLevel++;
-                    EmissionFlipBookFoldout8 = EditorGUILayout.Foldout(EmissionFlipBookFoldout8, "Emission Flipbook Settings 8", EditorStyles.boldFont);
-                    if (EmissionFlipBookFoldout8)
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            EmissionFoldout8 = EditorGUILayout.Foldout(EmissionFoldout8, "Emission Channel 8", true);
+                            if (EmissionFoldout8)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map", "Lit (RGB), Alpha (A)"),
+                                _emissionMap8, _emissionColor8, _emissionAmount8);
 
-                        materialEditor.ShaderProperty(_emissionTexColumns8, "Columns");
-                        materialEditor.ShaderProperty(_emissionTexRows8, "Rows");
-                        materialEditor.ShaderProperty(_emissionTexSpeed8, "Speed");
-                        materialEditor.ShaderProperty(_emissionTexFrameIND8, "Start/Selected Frame");
-                        materialEditor.ShaderProperty(_emissionTexEndFrameIND8, "End Frame");
+                                EditorGUILayout.Space();
 
-                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode8, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _emissionTexBinary8, materialEditor);
 
-                        EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                EmissionFlipBookFoldout8 = EditorGUILayout.Foldout(EmissionFlipBookFoldout8, "Flipbook Settings", EditorStyles.boldFont);
+                                if (EmissionFlipBookFoldout8)
+                                {
+
+                                    materialEditor.ShaderProperty(_emissionTexColumns8, "Columns");
+                                    materialEditor.ShaderProperty(_emissionTexRows8, "Rows");
+                                    materialEditor.ShaderProperty(_emissionTexSpeed8, "Speed");
+                                    materialEditor.ShaderProperty(_emissionTexFrameIND8, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_emissionTexEndFrameIND8, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode8, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _emissionTexUV8, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUI.indentLevel--;
+                    EditorGUILayout.EndVertical();
 
-                    materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map 9", "Lit (RGB), Alpha (A)"),
-                            _emissionMap9, _emissionColor9, _emissionAmount9);
-
-                    EditorGUI.indentLevel++;
-                    EmissionFlipBookFoldout9 = EditorGUILayout.Foldout(EmissionFlipBookFoldout9, "Emission Flipbook Settings 9", EditorStyles.boldFont);
-                    if (EmissionFlipBookFoldout9)
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            EmissionFoldout9 = EditorGUILayout.Foldout(EmissionFoldout9, "Emission Channel 9", true);
+                            if (EmissionFoldout9)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map", "Lit (RGB), Alpha (A)"),
+                                _emissionMap9, _emissionColor9, _emissionAmount9);
 
-                        materialEditor.ShaderProperty(_emissionTexColumns9, "Columns");
-                        materialEditor.ShaderProperty(_emissionTexRows9, "Rows");
-                        materialEditor.ShaderProperty(_emissionTexSpeed9, "Speed");
-                        materialEditor.ShaderProperty(_emissionTexFrameIND9, "Start/Selected Frame");
-                        materialEditor.ShaderProperty(_emissionTexEndFrameIND9, "End Frame");
+                                EditorGUILayout.Space();
 
-                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode9, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _emissionTexBinary9, materialEditor);
 
-                        EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                EmissionFlipBookFoldout9 = EditorGUILayout.Foldout(EmissionFlipBookFoldout9, "Flipbook Settings", EditorStyles.boldFont);
+                                if (EmissionFlipBookFoldout9)
+                                {
+
+                                    materialEditor.ShaderProperty(_emissionTexColumns9, "Columns");
+                                    materialEditor.ShaderProperty(_emissionTexRows9, "Rows");
+                                    materialEditor.ShaderProperty(_emissionTexSpeed9, "Speed");
+                                    materialEditor.ShaderProperty(_emissionTexFrameIND9, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_emissionTexEndFrameIND9, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode9, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _emissionTexUV9, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUI.indentLevel--;
+                    EditorGUILayout.EndVertical();
 
-                    materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map 10", "Lit (RGB), Alpha (A)"),
-                            _emissionMap10, _emissionColor10, _emissionAmount10);
-
-                    EditorGUI.indentLevel++;
-                    EmissionFlipBookFoldout10 = EditorGUILayout.Foldout(EmissionFlipBookFoldout10, "Emission Flipbook Settings 10", EditorStyles.boldFont);
-                    if (EmissionFlipBookFoldout10)
+                    EditorGUILayout.BeginVertical(GUI.skin.box);
                     {
+                        EditorGUILayout.BeginVertical(GUI.skin.box);
+                        {
+                            EmissionFoldout10 = EditorGUILayout.Foldout(EmissionFoldout10, "Emission Channel 10", true);
+                            if (EmissionFoldout10)
+                            {
+                                EditorGUILayout.LabelField("Texture, Color, Amount", EditorStyles.boldLabel);
+                                materialEditor.TexturePropertySingleLine(new GUIContent("Emission Map", "Lit (RGB), Alpha (A)"),
+                                _emissionMap10, _emissionColor10, _emissionAmount10);
 
-                        materialEditor.ShaderProperty(_emissionTexColumns10, "Columns");
-                        materialEditor.ShaderProperty(_emissionTexRows10, "Rows");
-                        materialEditor.ShaderProperty(_emissionTexSpeed10, "Speed");
-                        materialEditor.ShaderProperty(_emissionTexFrameIND10, "Start/Selected Frame");
-                        materialEditor.ShaderProperty(_emissionTexEndFrameIND10, "End Frame");
+                                EditorGUILayout.Space();
 
-                        PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode10, materialEditor);
+                                PopupEnum<IsBinaryToggle>("Amount Behavior", _emissionTexBinary10, materialEditor);
 
-                        EditorGUILayout.Space();
+                                EditorGUILayout.Space();
 
+                                EditorGUI.indentLevel++;
+                                EmissionFlipBookFoldout10 = EditorGUILayout.Foldout(EmissionFlipBookFoldout10, "Flipbook Settings", EditorStyles.boldFont);
+                                if (EmissionFlipBookFoldout10)
+                                {
+
+                                    materialEditor.ShaderProperty(_emissionTexColumns10, "Columns");
+                                    materialEditor.ShaderProperty(_emissionTexRows10, "Rows");
+                                    materialEditor.ShaderProperty(_emissionTexSpeed10, "Speed");
+                                    materialEditor.ShaderProperty(_emissionTexFrameIND10, "Start/Selected Frame");
+                                    materialEditor.ShaderProperty(_emissionTexEndFrameIND10, "End Frame");
+
+                                    PopupEnum<EditorWrapMode>("Texture Wrap Mode", _emissionTexWrapMode10, materialEditor);
+
+                                }
+                                EditorGUI.indentLevel--;
+
+                                EditorGUILayout.Space();
+
+                                PopupEnum<UVSetMode>("Use UV Set", _emissionTexUV10, materialEditor);
+                            }
+                        }
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUI.indentLevel--;
-
+                    EditorGUILayout.EndVertical();
+                    EditorGUILayout.Space();
 
                     materialEditor.TexturePropertySingleLine(new GUIContent("MatCap", "MatCap Texture (RGB)"),
                         _sphereAdd);
