@@ -31,7 +31,7 @@ Adds support for: <br>
 * 10 Emission textures with color <br>
 	- Emission texture channels are default white <br>
 	- Color channels are multiplied by the Emission texture channel <br>
-	- Emission 1 is always on. Each subsequent channel overwrites the channel prior <br>
+	- Each subsequent channel overwrites the channel prior <br>
 	- All color channels are HDR enabled <br><br>
  
 * Stencil ID<br><br>
