@@ -37,7 +37,7 @@ Adds support for: <br>
 * Stencil ID<br><br>
 
 * UV Set selector for each texture slot. This will allow models that have different UV Sets baked in during modelling; i.e. a model can have a UV Set for standard Albedo texture map, and an optimized UV Set for details. Due to unity limitations, only 4 UV Sets can be baked into a model and accessed by this shader.
-  	- Though under-utilized, models can be made with multiple uv sets with <b>different</b> layouts, meaning something like detail and emission maps, can be hyper optimized and increase quality as compared to the more common method of using the albedo uv map for everything, which may not make the best use of space. Defaulted to UV1 (it's actually uv0, this is just for readability) which is the standard uv map location. If a mesh doesn't have multiple uv sets, this setting will not change anything as non-existant uv sets are just duplicates of the first uv set
+  	- Though under-utilized, models can be made with multiple uv sets with <b>different</b> layouts, meaning something like detail and emission maps, can be hyper optimized and increase quality as compared to the more common method of using the albedo uv map for everything, which may not make the best use of space. Defaulted to UV1 (it's actually uv0, this is just for readability) which is the standard uv map location. If a mesh doesn't have multiple uv sets, this setting will not change anything as non-existant uv sets are just duplicates of the first uv set<br><br>
 
 * Flipbook Textures on Color/Shade, Decal, and Emission Channels<br>
 	- Shade Texture Channels are animated as well and synced to Color Texture Channels<br>
