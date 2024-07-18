@@ -8,7 +8,7 @@ This is a modified version of Suvidriel's MToon Multitexture. Reduced the number
 [UniVRM-0.61.1_7c03 Unity Package](https://github.com/vrm-c/UniVRM/releases/tag/v0.61.1) <br>
 [VSeeFace SDK Unity Package](https://github.com/emilianavt/VSeeFaceSDK/releases) (Only needed if you are exporting as a vtube model. If it's only for unity, you can ignore) <br>
  <br>
- <b>!Important Note! Install this AFTER UniVRM. If errors pop up, place the .shader and both .cginc files in the root folder into "VRMShaders/MToon/Mtoon/Resources/Shaders", then place the .cs file in the Editor folder into "VRMShaders/MToon/MToon/Editor"! New releases will be in unity package files, so download from the release pages instead of from the main brain here.</b> <br>
+ <b>!Important Note! Install this AFTER UniVRM. If errors pop up, place the .shader and both .cginc files in the root folder into "VRMShaders/MToon/Mtoon/Resources/Shaders", then place the .cs file in the Editor folder into "VRMShaders/MToon/MToon/Editor"! New releases will be in unity package files, so download from the release pages instead of from the main branch here.</b> <br>
 # Current Features
 
 Adds support for: <br>
