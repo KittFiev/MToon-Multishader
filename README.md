@@ -36,8 +36,11 @@ Adds support for: <br>
  
 * Stencil ID<br><br>
 
+* UV Set selector for each texture slot. This will allow models that have different UV Sets baked in during modelling; i.e. a model can have a UV Set for standard Albedo texture map, and an optimized UV Set for details. Due to unity limitations, only 4 UV Sets can be baked into a model and accessed by this shader.
+
 * Flipbook Textures on Color/Shade, Decal, and Emission Channels<br>
 	- Shade Texture Channels are animated as well and synced to Color Texture Channels<br>
  	- The <b>End Frame</b> float determines the final frame of the animation. This is counted from top left to bottom right. Animation will restart from beginning after this frame<br>
+  	- Can be used with <b>Amount Behavior</b> mode set to <b>Binary</b> for 2d lip syncing by setting the same mouth texture atlas in different slots, using the <b>Start/Selected Frame</b> index to select which mouth shape that slot will hold and activating them with the texture slots <b>amount slider</b>. <b>Binary</b> mode returns 1 if the amount slider is greater than 0, while <b>Float</b> allows the slider to act normal
 	- <b>!IMPORTANT NOTE!</b> If you are modifying the tile & offset of the materials UV, make sure that <b>Generate Mipmaps"</b> on the texture is turned <b>OFF</b> to avoid lines around the UV!<br>
  	- <b>!IMPORTANT NOTE!</b> Make sure the textures wrap mode is set to <b>Repeat</b>! Otherwise the animation may not play correctly! Instead, you need to use the Texture Wrap Mode found in the Flipbook Settings of each texture slot<br>
